@@ -41,26 +41,34 @@ JS_FILE = os.path.join(ROOT, "newjs.txt")
 
 NAV_NEW = [
     {"tipo": "link", "label": "Início", "href": "index.html"},
-    {"tipo": "link", "label": "Ortopedistas", "href": "ortopedistas-em-curitiba.html"},
     {
         "tipo": "group",
         "label": "Por região do corpo",
         "id": "menu-regioes",
         "itens": [
+            {"label": "Ortopedia geral", "href": "ortopedia-geral-curitiba.html",
+             "sub": "Cuida de tudo, comece por aqui"},
+            {"label": "Ver todas as áreas", "href": "ortopedistas-em-curitiba.html",
+             "sub": "A lista completa de ortopedistas"},
             {"grupo": "Membro inferior"},
             {"label": "Joelho", "href": "ortopedista-joelho-curitiba.html",
              "sub": "Dor, menisco, ligamentos, artrose"},
-            {"label": "Quadril", "soon": True, "sub": "Conteúdo no site irmão"},
-            {"label": "Pé e tornozelo", "soon": True},
+            {"label": "Quadril", "href": "ortopedista-quadril-curitiba.html",
+             "sub": "Virilha, artrose, bursite, prótese"},
+            {"label": "Pé e tornozelo", "href": "ortopedista-pe-tornozelo-curitiba.html",
+             "sub": "Calcanhar, entorse, joanete, Aquiles"},
             {"grupo": "Membro superior e coluna"},
             {"label": "Ombro", "href": "ortopedista-ombro-curitiba.html",
              "sub": "Manguito rotador, tendinite, luxação"},
             {"label": "Coluna", "href": "ortopedista-coluna-curitiba.html",
              "sub": "Lombalgia, hérnia de disco, ciática"},
-            {"label": "Mão e punho", "soon": True},
+            {"label": "Mão e punho", "href": "ortopedista-mao-curitiba.html",
+             "sub": "Túnel do carpo, dedo em gatilho"},
             {"grupo": "Outras áreas"},
-            {"label": "Ortopedia infantil", "soon": True},
-            {"label": "Medicina esportiva", "soon": True},
+            {"label": "Ortopedia infantil", "href": "ortopedista-infantil-curitiba.html",
+             "sub": "Crianças e adolescentes"},
+            {"label": "Medicina esportiva", "href": "medicina-esportiva-curitiba.html",
+             "sub": "Lesões de treino e retorno ao esporte"},
         ],
     },
     {
@@ -68,31 +76,80 @@ NAV_NEW = [
         "label": "Guias",
         "id": "menu-guias",
         "itens": [
+            {"grupo": "Antes de marcar"},
             {"label": "Qual médico procurar para cada dor", "href": "qual-medico-procurar-para-cada-dor.html",
              "sub": "Tabela de sintoma por especialidade"},
+            {"label": "Como escolher um bom ortopedista", "href": "melhor-ortopedista-curitiba.html",
+             "sub": "Critérios objetivos, sem ranking"},
             {"label": "CRM, RQE e como verificar", "href": "crm-rqe-como-verificar-ortopedista.html",
-             "sub": "Confira o registro antes da consulta"},
-            {"label": "Sobre o projeto", "href": "sobre.html"},
+             "sub": "Confira o registro em um minuto"},
+            {"grupo": "Acesso e custos"},
+            {"label": "Ortopedista pelo SUS em Curitiba", "href": "ortopedista-sus-curitiba.html",
+             "sub": "O caminho, passo a passo"},
+            {"label": "Quanto custa a consulta", "href": "quanto-custa-consulta-ortopedista-curitiba.html",
+             "sub": "SUS, convênio e particular"},
+            {"label": "Primeira consulta: o que levar", "href": "primeira-consulta-ortopedista.html",
+             "sub": "Documentos, exames e perguntas"},
+            {"label": "Ortopedista, reumatologista ou fisiatra", "href": "ortopedista-reumatologista-fisiatra.html",
+             "sub": "Quem cuida do quê"},
+            {"grupo": "O projeto"},
+            {"label": "Sobre o Curitiba Ortopedia", "href": "sobre.html"},
         ],
     },
-    {"tipo": "cta", "label": "Cadastre-se", "href": "cadastre-se.html"},
+    {"tipo": "link", "label": "Para médicos", "href": "cadastre-se.html"},
+    {"tipo": "cta-accent", "label": "Buscar ortopedista", "href": "encontre-um-ortopedista.html"},
 ]
 
 # Colunas de links do rodapé.
 FOOTER_TEMAS_NEW = [
+    ("Buscar ortopedista por área", "encontre-um-ortopedista.html", False),
     ("Ortopedista em Curitiba", "ortopedistas-em-curitiba.html", False),
-    ("Ortopedista de joelho", "ortopedista-joelho-curitiba.html", False),
-    ("Ortopedista de coluna", "ortopedista-coluna-curitiba.html", False),
-    ("Ortopedista de ombro", "ortopedista-ombro-curitiba.html", False),
-    ("Qual médico procurar", "qual-medico-procurar-para-cada-dor.html", False),
-    ("CRM, RQE e verificação", "crm-rqe-como-verificar-ortopedista.html", False),
+    ("Ortopedia geral", "ortopedia-geral-curitiba.html", False),
+    ("Joelho", "ortopedista-joelho-curitiba.html", False),
+    ("Coluna", "ortopedista-coluna-curitiba.html", False),
+    ("Ombro", "ortopedista-ombro-curitiba.html", False),
+    ("Quadril", "ortopedista-quadril-curitiba.html", False),
+    ("Mão e punho", "ortopedista-mao-curitiba.html", False),
+    ("Pé e tornozelo", "ortopedista-pe-tornozelo-curitiba.html", False),
+    ("Ortopedia infantil", "ortopedista-infantil-curitiba.html", False),
+    ("Medicina esportiva", "medicina-esportiva-curitiba.html", False),
+]
+
+FOOTER_GUIAS_NEW = [
+    ("Qual médico procurar para cada dor", "qual-medico-procurar-para-cada-dor.html"),
+    ("Como escolher um bom ortopedista", "melhor-ortopedista-curitiba.html"),
+    ("CRM, RQE e como verificar", "crm-rqe-como-verificar-ortopedista.html"),
+    ("Ortopedista pelo SUS em Curitiba", "ortopedista-sus-curitiba.html"),
+    ("Quanto custa a consulta", "quanto-custa-consulta-ortopedista-curitiba.html"),
+    ("Primeira consulta: o que levar", "primeira-consulta-ortopedista.html"),
+    ("Ortopedista, reumatologista ou fisiatra", "ortopedista-reumatologista-fisiatra.html"),
 ]
 
 FOOTER_SITE_NEW = [
     ("Sobre o projeto", "sobre.html"),
     ("Cadastre-se na lista", "cadastre-se.html"),
     ("Privacidade e LGPD", "privacidade.html"),
+    ("Saúde do quadril, site irmão", "https://quadrilcuritiba.com.br/"),
 ]
+
+A11Y_BLOCK = (
+    '<div class="a11y" role="group" aria-label="Tamanho da letra">'
+    '<span class="rotulo">Letra</span>'
+    '<button type="button" class="menos" aria-label="Diminuir o tamanho da letra">A</button>'
+    '<button type="button" class="mais" aria-label="Aumentar o tamanho da letra">A</button>'
+    "</div>"
+)
+
+FAB_BLOCK = (
+    '<a class="fab" href="encontre-um-ortopedista.html">' + '<svg viewBox="0 0 24 24" fill="none" '
+    'stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true">'
+    '<circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/></svg>'
+    "Buscar ortopedista</a>"
+)
+
+LUPA_SVG = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" '
+            'stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/>'
+            '<path d="M20 20l-3.6-3.6"/></svg>')
 
 # ---------------------------------------------------------------------------
 # 2. Marca
@@ -132,7 +189,12 @@ def _item_html(it, mobile=False):
     inner = it["label"]
     if sub and not mobile:
         inner = "%s<small>%s</small>" % (it["label"], sub)
-    return '<a href="%s">%s</a>' % (it["href"], inner)
+    classe = it.get("classe", "")
+    externo = it["href"].startswith("http")
+    attrs = ' class="%s"' % classe if classe else ""
+    if externo:
+        attrs += ' rel="noopener"'
+    return '<a href="%s"%s>%s</a>' % (it["href"], attrs, inner)
 
 
 def build_nav():
@@ -142,6 +204,9 @@ def build_nav():
             out.append('<a class="nav-link" href="%s">%s</a>' % (e["href"], e["label"]))
         elif e["tipo"] == "cta":
             out.append('<a class="nav-link cta" href="%s">%s</a>' % (e["href"], e["label"]))
+        elif e["tipo"] == "cta-accent":
+            out.append('<a class="nav-link cta-accent" href="%s">%s%s</a>'
+                       % (e["href"], LUPA_SVG, e["label"]))
         else:
             out.append('<div class="nav-group" data-open="false">')
             out.append(
@@ -158,7 +223,12 @@ def build_nav():
 
 def build_mobile_panel():
     out = ['<div class="mobile-panel" id="menu-mobile"><div class="inner">']
+    destaque = [e for e in NAV_NEW if e["tipo"] == "cta-accent"]
+    for e in destaque:
+        out.append('<a class="destaque" href="%s">%s</a>' % (e["href"], e["label"]))
     for e in NAV_NEW:
+        if e["tipo"] == "cta-accent":
+            continue
         if e["tipo"] == "link":
             out.append('<a href="%s">%s</a>' % (e["href"], e["label"]))
         elif e["tipo"] == "cta":
@@ -169,6 +239,8 @@ def build_mobile_panel():
                 if "grupo" in it:
                     continue
                 out.append(_item_html(it, mobile=True))
+    out.append('<div class="grp">Tamanho da letra</div>')
+    out.append(A11Y_BLOCK)
     out.append("</div></div>")
     return "".join(out)
 
@@ -179,11 +251,13 @@ def build_header():
         '<div class="bar">'
         + BRAND_BLOCK
         + build_nav()
+        + A11Y_BLOCK
         + '<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-mobile">'
         '<span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>Menu</button>'
         "</div>"
         + build_mobile_panel()
         + "</header>"
+        + FAB_BLOCK
     )
 
 
@@ -197,7 +271,7 @@ CONTACT_BLOCK = (
     "quer sugerir um tema ou se precisa corrigir ou remover os seus dados, escreva para o e-mail "
     "abaixo. Pedidos de correção e de remoção são atendidos sem custo.</p>"
     '<p class="mailrow">'
-    '<a class="btn" href="mailto:contato@curitibaortopedia.com.br">contato@curitibaortopedia.com.br</a>'
+    '<a class="btn" href="mailto:curitibaquadril@gmail.com">curitibaquadril@gmail.com</a>'
     '<a class="btn ghost" href="cadastre-se.html">Entrar para a lista</a>'
     "</p>"
     "</section>"
@@ -209,6 +283,7 @@ def build_footer():
         ('<li><span class="muted">%s</span></li>' % t) if soon else ('<li><a href="%s">%s</a></li>' % (h, t))
         for (t, h, soon) in FOOTER_TEMAS_NEW
     )
+    guias = "".join('<li><a href="%s">%s</a></li>' % (h, t) for (t, h) in FOOTER_GUIAS_NEW)
     site = "".join('<li><a href="%s">%s</a></li>' % (h, t) for (t, h) in FOOTER_SITE_NEW)
     return (
         '<footer class="site-footer">'
@@ -218,7 +293,8 @@ def build_footer():
         "metropolitana, com uma lista de ortopedistas organizada por área de atuação.</p>"
         "<p>Conteúdo educativo, escrito em linguagem de paciente e revisado periodicamente. "
         "Nada aqui substitui a consulta com um médico.</p></div>"
-        "<div><h3>Temas</h3><ul>" + temas + "</ul></div>"
+        "<div><h3>Áreas</h3><ul>" + temas + "</ul></div>"
+        "<div><h3>Guias</h3><ul>" + guias + "</ul></div>"
         "<div><h3>O projeto</h3><ul>" + site + "</ul></div>"
         "</div>"
         '<div class="legal">'

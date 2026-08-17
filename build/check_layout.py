@@ -25,10 +25,12 @@ MEDIDA = """() => {
   const nav = document.querySelector('nav.mainnav');
   const brand = document.querySelector('.site-header .brand');
   const cs = getComputedStyle(bar);
+  const a11y = bar.querySelector('.a11y');
+  const extra = a11y ? a11y.offsetWidth + 18 : 0;
   const disponivel = bar.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
   return {
     disponivel: Math.round(disponivel),
-    necessario: Math.round(nav.scrollWidth + brand.offsetWidth + 18),
+    necessario: Math.round(nav.scrollWidth + brand.offsetWidth + extra + 18),
     navVisivel: getComputedStyle(nav).display !== 'none',
     mobile: document.body.classList.contains('nav-mobile'),
     overflow: document.documentElement.scrollWidth - document.documentElement.clientWidth

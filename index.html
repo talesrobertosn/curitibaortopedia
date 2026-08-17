@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ortopedista em Curitiba: guia para escolher o especialista</title>
-<meta name="description" content="Guia gratuito e independente para encontrar ortopedista em Curitiba por área de atuação: joelho, coluna, ombro, quadril, mão, pé e ortopedia infantil.">
+<title>Ortopedista em Curitiba: encontre por onde dói</title>
+<meta name="description" content="Guia gratuito para encontrar ortopedista em Curitiba pela parte do corpo que dói: joelho, coluna, ombro, quadril, mão, pé, ortopedia infantil e esporte.">
 <link rel="canonical" href="https://curitibaortopedia.com.br/">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Curitiba Ortopedia">
-<meta property="og:title" content="Ortopedista em Curitiba: guia para escolher o especialista">
-<meta property="og:description" content="Guia gratuito e independente para encontrar ortopedista em Curitiba por área de atuação, com explicações em linguagem de paciente.">
+<meta property="og:title" content="Ortopedista em Curitiba: encontre por onde dói">
+<meta property="og:description" content="Digite onde dói e veja qual ortopedista cuida disso em Curitiba. Projeto informativo gratuito, sem ranking e sem propaganda.">
 <meta property="og:url" content="https://curitibaortopedia.com.br/">
 <meta property="og:image" content="https://curitibaortopedia.com.br/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -80,7 +80,7 @@
 
 *,*::before,*::after{box-sizing:border-box}
 
-html{ -webkit-text-size-adjust:100%; scroll-behavior:smooth; scroll-padding-top:calc(var(--head-h) + 18px); }
+html{ font-size:calc(16px * var(--escala, 1)); -webkit-text-size-adjust:100%; scroll-behavior:smooth; scroll-padding-top:calc(var(--head-h) + 18px); }
 @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} }
 
 body{
@@ -88,8 +88,8 @@ body{
   background:var(--bg);
   color:var(--ink);
   font-family:var(--sans);
-  font-size:17.5px;
-  line-height:1.72;
+  font-size:1.125rem;
+  line-height:1.74;
   font-weight:400;
   -webkit-font-smoothing:antialiased;
   text-rendering:optimizeLegibility;
@@ -159,24 +159,30 @@ nav.mainnav a.nav-link,nav.mainnav button.nav-btn{
 }
 nav.mainnav a.nav-link:hover,nav.mainnav button.nav-btn:hover{background:var(--brand-soft);color:var(--brand-700)}
 nav.mainnav a.nav-link[aria-current="page"]{color:var(--brand-700);background:var(--brand-soft);font-weight:600}
-nav.mainnav .cta{background:var(--brand);color:#fff;padding:9px 15px;border-radius:999px;font-weight:600}
-nav.mainnav .cta:hover{background:var(--brand-700);color:#fff}
+nav.mainnav a.nav-link.cta{background:var(--brand);color:#fff;padding:10px 17px;border-radius:999px;font-weight:600}
+nav.mainnav a.nav-link.cta:hover{background:var(--brand-700);color:#fff}
+nav.mainnav a.nav-link.cta-accent{background:var(--accent);color:#fff;padding:11px 20px;border-radius:999px;font-weight:700;font-size:.92rem;box-shadow:0 6px 16px rgba(178,94,54,.28)}
+nav.mainnav a.nav-link.cta-accent:hover,nav.mainnav a.nav-link.cta-accent[aria-current="page"]{background:var(--accent-700);color:#fff;box-shadow:0 8px 22px rgba(178,94,54,.34)}
+nav.mainnav a.nav-link.cta-accent svg{width:16px;height:16px}
 .nav-btn .chev{width:9px;height:9px;border-right:1.8px solid currentColor;border-bottom:1.8px solid currentColor;transform:rotate(45deg) translateY(-2px);transition:transform .2s ease}
 .nav-group[data-open="true"] .chev{transform:rotate(-135deg) translateY(-2px)}
 
 .nav-group{position:relative}
+/* ponte invisível entre o botão e o menu: sem ela, o menu fecha ao descer o mouse */
+.nav-group::after{content:"";position:absolute;left:-20px;right:-20px;top:100%;height:20px}
 .nav-menu{
-  position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%) translateY(-6px);
-  min-width:264px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
-  box-shadow:var(--sh-3);padding:8px;opacity:0;visibility:hidden;transition:opacity .18s ease,transform .18s ease;
+  position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%) translateY(-6px);
+  min-width:320px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);
+  box-shadow:var(--sh-3);padding:10px;opacity:0;visibility:hidden;transition:opacity .18s ease,transform .18s ease;
 }
 .nav-group[data-open="true"] .nav-menu{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
-.nav-menu a{display:block;position:relative;padding:9px 11px;border-radius:9px;text-decoration:none;color:var(--ink-2);font-size:.88rem;line-height:1.35}
+.nav-menu a{display:block;position:relative;padding:12px 14px;border-radius:11px;text-decoration:none;color:var(--ink-2);font-size:1rem;font-weight:500;line-height:1.35}
 .nav-menu a:hover{background:var(--brand-soft);color:var(--brand-700)}
-.nav-menu a small{display:block;color:var(--muted-2);font-size:.76rem;margin-top:1px}
-.nav-menu .grp{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted-2);font-weight:700;padding:9px 11px 5px}
-.nav-menu a.soon{color:var(--muted-2);cursor:default;pointer-events:none;padding-right:78px}
-.nav-menu a.soon::after{content:"em breve";position:absolute;right:11px;top:8px;font-size:.68rem;background:var(--surface-2);color:var(--muted-2);padding:1px 7px;border-radius:999px;line-height:1.5}
+.nav-menu a small{display:block;color:var(--muted-2);font-size:.82rem;font-weight:400;margin-top:2px}
+.nav-menu .grp{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted-2);font-weight:700;padding:12px 14px 6px}
+.nav-menu a.soon{color:var(--muted-2);cursor:default;pointer-events:none;padding-right:84px}
+.nav-menu a.soon::after{content:"em breve";position:absolute;right:14px;top:12px;font-size:.7rem;background:var(--surface-2);color:var(--muted-2);padding:2px 8px;border-radius:999px;line-height:1.5}
+.nav-menu a.ext::after{content:"↗";position:absolute;right:14px;top:12px;color:var(--accent);font-size:.9rem}
 
 .menu-toggle{display:none;background:none;border:1px solid var(--line-2);border-radius:10px;padding:8px 12px;align-items:center;gap:8px;cursor:pointer;font-family:var(--sans);font-size:.85rem;font-weight:600;color:var(--brand-700)}
 .menu-toggle .bars{width:16px;height:11px;position:relative;display:inline-block}
@@ -191,7 +197,9 @@ nav.mainnav .cta:hover{background:var(--brand-700);color:#fff}
 .mobile-panel{display:none;border-top:1px solid var(--line);background:var(--surface);max-height:min(74vh,560px);overflow:auto}
 .mobile-panel .inner{max-width:var(--wrap-head);margin-inline:auto;padding:14px 22px 22px}
 .mobile-panel .grp{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted-2);font-weight:700;margin:16px 0 6px}
-.mobile-panel a{display:block;padding:10px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink-2);font-size:.98rem}
+.mobile-panel a{display:block;padding:15px 4px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink-2);font-size:1.06rem;font-weight:500}
+.mobile-panel a.destaque{background:var(--accent);color:#fff;border:0;border-radius:14px;font-weight:700;text-align:center;padding:16px;margin:6px 0 4px}
+.mobile-panel a.destaque:hover{background:var(--accent-700);color:#fff}
 .mobile-panel a.soon{color:var(--muted-2);pointer-events:none}
 .mobile-panel a.soon::after{content:" — em breve";font-size:.78rem;color:var(--muted-2)}
 .mobile-panel .cta{display:inline-block;margin-top:18px;background:var(--brand);color:#fff;border:0;border-radius:999px;padding:12px 22px;font-weight:600;text-align:center}
@@ -336,13 +344,15 @@ a.card:hover .more{gap:10px}
 .refs a{color:var(--muted);word-break:break-word}
 
 /* ---------- botões ---------- */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;background:var(--brand);color:#fff;border:1px solid var(--brand);border-radius:999px;padding:12px 24px;font-family:var(--sans);font-size:.92rem;font-weight:600;text-decoration:none;cursor:pointer;transition:background .18s ease,transform .18s ease,box-shadow .18s ease;box-shadow:var(--sh-1)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;background:var(--brand);color:#fff;border:1px solid var(--brand);border-radius:999px;padding:13px 26px;font-family:var(--sans);font-size:.96rem;font-weight:600;text-decoration:none;cursor:pointer;transition:background .18s ease,transform .18s ease,box-shadow .18s ease;box-shadow:var(--sh-1)}
 .btn:hover{background:var(--brand-700);border-color:var(--brand-700);color:#fff;transform:translateY(-1px);box-shadow:var(--sh-2)}
+.btn svg{width:18px;height:18px;flex:0 0 auto}
 .btn.ghost{background:transparent;color:var(--brand-700);border-color:var(--line-2);box-shadow:none}
 .btn.ghost:hover{background:var(--surface);border-color:var(--brand-300);color:var(--brand-700)}
-.btn.accent{background:var(--accent);border-color:var(--accent)}
-.btn.accent:hover{background:var(--accent-700);border-color:var(--accent-700)}
-.btn-row{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 6px}
+.btn.accent{background:var(--accent);border-color:var(--accent);box-shadow:0 8px 20px rgba(178,94,54,.26)}
+.btn.accent:hover{background:var(--accent-700);border-color:var(--accent-700);box-shadow:0 12px 26px rgba(178,94,54,.32)}
+.btn.lg{min-height:60px;font-size:1.06rem;padding:16px 34px;font-weight:700}
+.btn-row{display:flex;flex-wrap:wrap;gap:14px;margin:28px 0 6px}
 
 /* ---------- bloco de contato ---------- */
 .contact-block{background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:var(--r-lg);padding:30px 32px;margin:56px 0 20px;box-shadow:var(--sh-1)}
@@ -353,7 +363,7 @@ a.card:hover .more{gap:10px}
 
 /* ---------- rodapé ---------- */
 .site-footer{background:var(--brand-700);color:#B9C6D2;margin-top:60px;padding:52px 0 26px;font-size:.9rem}
-.site-footer .cols{display:grid;gap:34px;grid-template-columns:1.35fr 1fr 1fr}
+.site-footer .cols{display:grid;gap:34px;grid-template-columns:1.25fr .9fr 1.15fr .9fr}
 .site-footer h3{color:#fff;font-family:var(--sans);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;margin:0 0 14px;font-weight:700}
 .site-footer ul{list-style:none;margin:0;padding:0}
 .site-footer li{margin-bottom:9px}
@@ -365,7 +375,8 @@ a.card:hover .more{gap:10px}
 .site-footer .fbrand span{font-family:var(--serif);font-size:1.1rem;font-weight:600}
 .site-footer .legal{border-top:1px solid rgba(255,255,255,.13);margin-top:38px;padding-top:20px;font-size:.79rem;color:#8FA1B1;line-height:1.65}
 .site-footer .legal p{color:#8FA1B1;font-size:.79rem}
-@media (max-width:780px){.site-footer .cols{grid-template-columns:1fr;gap:26px}}
+@media (max-width:980px){.site-footer .cols{grid-template-columns:1fr 1fr;gap:28px}}
+@media (max-width:620px){.site-footer .cols{grid-template-columns:1fr;gap:26px}}
 
 /* ---------- animação de entrada ---------- */
 .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s cubic-bezier(.2,.7,.3,1),transform .6s cubic-bezier(.2,.7,.3,1)}
@@ -396,9 +407,195 @@ a.card:hover .more{gap:10px}
   .post-fig{padding:16px}
 }
 
+/* ---------- busca de ortopedistas, estilo diretório ---------- */
+.finder{background:linear-gradient(180deg,var(--surface) 0%,var(--brand-softer) 100%);
+  border:1px solid var(--line);border-radius:22px;padding:28px 30px;box-shadow:var(--sh-2);margin:30px 0 10px}
+.finder h2{margin:0 0 6px;font-size:1.35rem}
+.finder p.hint{margin:0 0 18px;color:var(--muted);font-size:.95rem}
+.finder-field{position:relative;display:flex;align-items:center;gap:12px;background:var(--surface);
+  border:2px solid var(--line-2);border-radius:999px;padding:6px 8px 6px 20px;transition:border-color .18s ease,box-shadow .18s ease}
+.finder-field:focus-within{border-color:var(--accent);box-shadow:0 0 0 5px rgba(178,94,54,.13)}
+.finder-field .ico{width:22px;height:22px;color:var(--muted-2);flex:0 0 auto}
+.finder-field input{flex:1;min-width:0;border:0;outline:none;background:transparent;font-family:var(--sans);
+  font-size:1.08rem;color:var(--ink);padding:14px 0;line-height:1.3}
+.finder-field input::placeholder{color:var(--muted-2)}
+.finder-field .btn{flex:0 0 auto;min-height:48px}
+.finder-clear{border:0;background:none;color:var(--muted-2);font-size:1.4rem;line-height:1;cursor:pointer;padding:6px 10px;border-radius:50%}
+.finder-clear:hover{background:var(--surface-2);color:var(--ink-2)}
+.chips{display:flex;flex-wrap:wrap;gap:9px;margin:16px 0 0;padding:0;list-style:none}
+.chips li{margin:0}
+.chip{display:inline-flex;align-items:center;gap:7px;background:var(--surface);border:1px solid var(--line-2);
+  border-radius:999px;padding:9px 16px;font-size:.92rem;font-weight:500;color:var(--ink-2);cursor:pointer;
+  font-family:var(--sans);transition:all .16s ease}
+.chip:hover{border-color:var(--accent);color:var(--accent-700)}
+.chip[aria-pressed="true"]{background:var(--brand);border-color:var(--brand);color:#fff}
+.finder-status{margin:18px 0 0;font-size:.95rem;color:var(--muted);min-height:1.4em}
+
+.area-list{display:grid;gap:16px;margin:26px 0 6px;padding:0;list-style:none}
+.area-card{display:grid;grid-template-columns:auto 1fr auto;gap:20px;align-items:center;
+  background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px 24px;
+  box-shadow:var(--sh-1);text-decoration:none;color:inherit;
+  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+a.area-card:hover{transform:translateY(-3px);box-shadow:var(--sh-2);border-color:var(--brand-300)}
+.area-card .ico{width:58px;height:58px;border-radius:16px;background:var(--brand-soft);color:var(--brand);
+  display:grid;place-items:center;flex:0 0 auto}
+.area-card .ico svg{width:28px;height:28px}
+a.area-card:hover .ico{background:var(--accent-soft);color:var(--accent-700)}
+.area-card h3{margin:0 0 4px;font-size:1.28rem;color:var(--brand-700)}
+.area-card p{margin:0;color:var(--muted);font-size:.96rem;line-height:1.55}
+.area-card .go{display:inline-flex;align-items:center;justify-content:center;gap:8px;white-space:nowrap;
+  background:var(--brand);color:#fff;border-radius:999px;padding:12px 22px;font-size:.94rem;font-weight:600;min-height:48px}
+a.area-card:hover .go{background:var(--accent)}
+.area-card.ext .go{background:var(--accent)}
+.area-card.indisponivel{background:var(--surface-2);border-style:dashed;box-shadow:none}
+.area-card.indisponivel .ico{background:#EDEAE4;color:var(--muted-2)}
+.area-card.indisponivel .go{background:transparent;color:var(--muted-2);border:1px solid var(--line-2);font-weight:500}
+.area-card[hidden]{display:none}
+@media (max-width:680px){
+  .area-card{grid-template-columns:auto 1fr;gap:14px}
+  .area-card .go{grid-column:1 / -1;width:100%}
+  .finder{padding:22px 18px;border-radius:18px}
+  .finder-field{flex-wrap:wrap;border-radius:20px;padding:8px 12px}
+  .finder-field input{width:100%;font-size:1.05rem}
+  .finder-field .btn{width:100%}
+}
+
+/* faixa de destaque para achar o ortopedista a partir de qualquer página */
+.cta-band{background:linear-gradient(135deg,var(--brand-700) 0%,var(--brand) 55%,#2C4A66 100%);
+  color:#EAF0F5;border-radius:var(--r-lg);padding:34px 36px;margin:52px 0 10px;
+  display:flex;flex-wrap:wrap;gap:22px;align-items:center;justify-content:space-between;
+  box-shadow:0 20px 44px rgba(26,44,61,.22);position:relative;overflow:hidden}
+.cta-band::after{content:"";position:absolute;right:-90px;top:-120px;width:320px;height:320px;border-radius:50%;
+  border:40px solid rgba(255,255,255,.05)}
+.cta-band h2{color:#fff;margin:0 0 6px;font-size:1.5rem}
+.cta-band p{margin:0;color:#C3D0DC;font-size:1rem;max-width:52ch}
+.cta-band .btn{background:var(--accent);border-color:var(--accent);position:relative;z-index:1}
+.cta-band .btn:hover{background:#C9714A;border-color:#C9714A}
+@media (max-width:680px){.cta-band{padding:26px 22px}.cta-band .btn{width:100%}}
+
+/* ---------- vitrine de ortopedistas ---------- */
+/* atenção: usar margin-block, e nunca a forma curta margin, para não anular
+   o margin-inline:auto que vem de .wrap e jogar o bloco para a esquerda */
+.vitrine-bloco{margin-block:36px 12px;scroll-margin-top:calc(var(--head-h) + 14px)}
+.vitrine-topo{display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;margin-bottom:10px}
+.vitrine-topo h2{margin:0}
+.selo-gratis{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;border-radius:999px;
+  padding:8px 16px;font-size:.8rem;font-weight:700;letter-spacing:.03em;box-shadow:0 6px 16px rgba(178,94,54,.26)}
+.selo-gratis svg{width:15px;height:15px}
+.vitrine-intro{color:var(--ink-2);max-width:74ch;margin:0 0 6px;font-size:1rem}
+.vitrine-intro strong{color:var(--accent-700)}
+.vitrine{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(322px,1fr));margin:24px 0 0;padding:0;list-style:none}
+.vcard{position:relative;overflow:hidden;background:var(--surface);border:1px solid var(--line);border-radius:18px;
+  padding:24px 22px 20px;box-shadow:var(--sh-1);display:flex;flex-direction:column;gap:16px;
+  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.vcard:hover{transform:translateY(-3px);box-shadow:var(--sh-2);border-color:var(--brand-300)}
+.vcard::before{content:"";position:absolute;inset:0 0 auto 0;height:4px;
+  background:linear-gradient(90deg,var(--brand-500),var(--accent))}
+.vcard .vtopo{display:flex;gap:16px;align-items:center}
+.vfoto{width:78px;height:78px;border-radius:50%;border:2px dashed var(--line-2);background:var(--brand-softer);
+  color:var(--brand-300);display:grid;place-items:center;flex:0 0 auto}
+.vfoto svg{width:36px;height:36px}
+.vcard .vnome{font-family:var(--serif);font-size:1.16rem;font-weight:600;color:var(--brand-700);margin:0 0 4px;line-height:1.25}
+.vcard .vesp{margin:0;font-size:.92rem;color:var(--muted)}
+.vtag{display:inline-flex;align-items:center;gap:6px;margin-top:9px;font-size:.68rem;font-weight:700;letter-spacing:.11em;
+  text-transform:uppercase;background:var(--accent-soft);color:var(--accent-700);padding:5px 11px;border-radius:999px;
+  border:1px solid rgba(178,94,54,.2)}
+.vtag::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.vdados{margin:0;display:grid;gap:11px}
+.vlinha{display:grid;grid-template-columns:20px 1fr;gap:11px;align-items:center;font-size:.9rem;color:var(--muted-2)}
+.vlinha svg{width:18px;height:18px;color:var(--brand-300);flex:0 0 auto}
+.vlinha > div{display:grid;gap:6px;min-width:0}
+.vbarra{display:block;height:12px;border-radius:6px;background:repeating-linear-gradient(90deg,var(--surface-2) 0 14px,#EDE9E2 14px 15px)}
+.vbarra.curta{max-width:58%}
+.vbarra.media{max-width:78%}
+.vrotulo{font-size:.78rem;color:var(--muted-2);letter-spacing:.02em}
+.vcard .vfoot{margin-top:auto;border-top:1px solid var(--line);padding-top:16px}
+.vcard .vfoot .btn{width:100%;min-height:52px}
+.vcard .vnota{margin:11px 0 0;font-size:.8rem;color:var(--muted-2);line-height:1.5;text-align:center}
+.vcard .vnota strong{color:var(--accent-700);font-weight:700}
+.vitrine-rodape{margin-block:22px 0;padding:18px 20px;background:var(--surface-2);border-radius:var(--r);
+  font-size:.86rem;color:var(--muted);line-height:1.6}
+.faixa-gratis{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;justify-content:space-between;
+  background:var(--accent-soft);border:1px solid rgba(178,94,54,.24);border-radius:var(--r);
+  padding:18px 22px;margin-block:20px 0}
+.faixa-gratis p{margin:0;color:#4A3324;font-size:.96rem;line-height:1.55;max-width:62ch}
+.faixa-gratis strong{color:var(--accent-700)}
+.faixa-gratis .btn{flex:0 0 auto}
+
+/* ficha já preenchida com um profissional real */
+.vfoto.preenchida{border:0;background:var(--brand-soft);color:var(--brand);font-family:var(--serif);
+  font-size:1.5rem;font-weight:600}
+.vtag.registro{background:var(--brand-soft);color:var(--brand-700);border-color:rgba(34,56,78,.16);
+  font-variant-numeric:tabular-nums;letter-spacing:.04em}
+.vtag.registro::before{background:var(--brand-500)}
+.vficha{margin:0;display:grid;grid-template-columns:auto 1fr;gap:8px 14px;font-size:.93rem;color:var(--ink-2)}
+.vficha dt{color:var(--muted-2);font-size:.72rem;text-transform:uppercase;letter-spacing:.09em;font-weight:700;padding-top:3px}
+.vficha dd{margin:0;line-height:1.5}
+.vcard.preenchida .vfoot .btn{width:100%}
+@media (max-width:420px){
+  .vcard .vtopo{gap:13px}
+  .vfoto{width:64px;height:64px}
+  .vfoto svg{width:30px;height:30px}
+}
+
+/* controle de tamanho de letra */
+.a11y{display:inline-flex;align-items:center;gap:4px;border:1px solid var(--line-2);border-radius:999px;padding:3px;background:var(--surface)}
+.a11y button{border:0;background:none;cursor:pointer;font-family:var(--sans);font-weight:700;color:var(--brand-700);
+  border-radius:999px;line-height:1;padding:7px 10px;transition:background .16s ease}
+.a11y button:hover{background:var(--brand-soft)}
+.a11y button.menos{font-size:.82rem}
+.a11y button.mais{font-size:1.02rem}
+.a11y .rotulo{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted-2);font-weight:700;padding:0 6px 0 8px}
+body.nav-mobile .site-header .a11y{display:none}
+.mobile-panel .a11y{margin:16px 0 4px;padding:5px}
+.mobile-panel .a11y button{padding:11px 16px}
+
+/* grade de regiões do corpo, alvo grande para toque */
+.tile-grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(288px,1fr));margin:22px 0 0;padding:0;list-style:none}
+.tile{display:flex;align-items:center;gap:14px;background:var(--surface);border:2px solid var(--line);
+  border-radius:16px;padding:16px 18px;text-decoration:none;color:var(--ink);min-height:82px;
+  box-shadow:var(--sh-1);transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
+.tile:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:var(--sh-2);color:var(--ink)}
+.tile .ico{width:46px;height:46px;border-radius:13px;background:var(--brand-soft);color:var(--brand);
+  display:grid;place-items:center;flex:0 0 auto}
+.tile .ico svg{width:24px;height:24px}
+.tile:hover .ico{background:var(--accent-soft);color:var(--accent-700)}
+.tile b{display:block;font-size:1.08rem;font-weight:600;color:var(--brand-700);line-height:1.25}
+.tile span{display:block;font-size:.86rem;color:var(--muted);margin-top:3px;line-height:1.4}
+.tile[hidden]{display:none}
+
+/* busca dentro do hero da home */
+.hero-finder{margin:26px 0 0;max-width:820px}
+.hero-finder .finder{margin:0}
+.busca-vazia{display:none;background:var(--accent-soft);border:1px solid rgba(178,94,54,.25);border-radius:var(--r);
+  padding:16px 18px;margin:18px 0 0;color:#4A3324;font-size:.95rem}
+.busca-vazia.on{display:block}
+
+/* botão flutuante no celular */
+.fab{position:fixed;left:16px;right:16px;bottom:16px;z-index:90;display:none;align-items:center;justify-content:center;gap:10px;
+  background:var(--accent);color:#fff;border-radius:999px;padding:16px 22px;font-family:var(--sans);font-size:1.02rem;
+  font-weight:700;text-decoration:none;box-shadow:0 14px 30px rgba(20,28,36,.28);
+  transform:translateY(120%);transition:transform .28s cubic-bezier(.2,.7,.3,1)}
+.fab svg{width:19px;height:19px}
+.fab:hover,.fab:focus{color:#fff}
+body.nav-mobile .fab{display:flex}
+body.nav-mobile .fab.on{transform:translateY(0)}
+body.nav-open .fab{transform:translateY(160%)}
+@media (prefers-reduced-motion: reduce){.fab{transition:none}}
+
+/* passos numerados */
+.steps{counter-reset:passo;display:grid;gap:16px;margin:28px 0;padding:0;list-style:none}
+.steps li{counter-increment:passo;position:relative;background:var(--surface);border:1px solid var(--line);
+  border-radius:var(--r);padding:20px 22px 20px 78px;box-shadow:var(--sh-1)}
+.steps li::before{content:counter(passo);position:absolute;left:22px;top:19px;width:40px;height:40px;border-radius:50%;
+  background:var(--brand);color:#fff;display:grid;place-items:center;font-family:var(--serif);font-size:1.12rem;font-weight:600}
+.steps li b{display:block;color:var(--brand-700);font-size:1.06rem;margin-bottom:3px}
+.steps li span{color:var(--muted);font-size:.95rem;line-height:1.6}
+
 /* ---------- impressão ---------- */
 @media print{
-  .site-header,.readbar,.mobile-panel,.contact-block,.toc,.btn-row,.site-footer .legal{display:none !important}
+  .site-header,.readbar,.mobile-panel,.contact-block,.toc,.btn-row,.site-footer .legal,
+  .fab,.a11y,.finder,.chips,.cta-band{display:none !important}
   body{background:#fff;color:#000;font-size:11pt}
   .wrap{max-width:100%;padding:0}
   a{color:#000;text-decoration:underline}
@@ -432,7 +629,7 @@ a.card:hover .more{gap:10px}
       "@id": "https://curitibaortopedia.com.br/#organization",
       "name": "Curitiba Ortopedia",
       "url": "https://curitibaortopedia.com.br/",
-      "email": "contato@curitibaortopedia.com.br",
+      "email": "curitibaquadril@gmail.com",
       "areaServed": "Curitiba, Paraná, Brasil",
       "description": "Projeto informativo independente sobre ortopedia, sem fins comerciais."
     },
@@ -440,8 +637,8 @@ a.card:hover .more{gap:10px}
       "@type": "WebPage",
       "@id": "https://curitibaortopedia.com.br/#webpage",
       "url": "https://curitibaortopedia.com.br/",
-      "name": "Ortopedista em Curitiba: guia para escolher o especialista",
-      "description": "Guia gratuito e independente para encontrar ortopedista em Curitiba por área de atuação.",
+      "name": "Ortopedista em Curitiba: encontre por onde dói",
+      "description": "Guia gratuito para encontrar ortopedista em Curitiba pela parte do corpo que dói.",
       "inLanguage": "pt-BR",
       "isPartOf": { "@id": "https://curitibaortopedia.com.br/#website" },
       "publisher": { "@id": "https://curitibaortopedia.com.br/#organization" },
@@ -461,8 +658,13 @@ a.card:hover .more{gap:10px}
       "mainEntity": [
         {
           "@type": "Question",
+          "name": "Como encontro o ortopedista certo para o meu problema?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Comece pela parte do corpo que dói. No campo de busca no topo desta página, digite a palavra que você usaria para explicar a alguém, como joelho, coluna, ombro, mão, pé ou quadril, e o site mostra qual área da ortopedia cuida disso. Se preferir, use os botões grandes logo abaixo da busca. Se estiver em dúvida entre duas regiões, o guia qual médico procurar para cada dor parte do sintoma." }
+        },
+        {
+          "@type": "Question",
           "name": "Preciso de encaminhamento para consultar com ortopedista?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Depende da porta de entrada. No SUS, sim: o acesso ao ortopedista passa pela unidade básica de saúde, que avalia e encaminha para a fila da especialidade. Em boa parte dos planos de saúde, não é preciso encaminhamento para marcar diretamente com o ortopedista, mas alguns produtos com médico de família exigem a autorização prévia. No atendimento particular, nunca é preciso encaminhamento." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Depende da porta de entrada. No SUS, sim: o acesso ao ortopedista passa pela unidade básica de saúde, que avalia e encaminha para a fila da especialidade. Em boa parte dos planos de saúde, não é preciso encaminhamento para marcar diretamente com o ortopedista, mas alguns produtos com médico de família exigem autorização prévia. No atendimento particular, nunca é preciso encaminhamento." }
         },
         {
           "@type": "Question",
@@ -482,7 +684,7 @@ a.card:hover .more{gap:10px}
         {
           "@type": "Question",
           "name": "Quanto tempo demora para conseguir uma consulta de ortopedia em Curitiba?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Varia muito. No particular e em boa parte dos convênios, a consulta costuma sair em dias ou poucas semanas. No SUS, a fila para ortopedia eletiva é uma das mais longas do país e pode levar meses, com prioridade para casos avaliados como mais graves. Situações agudas, como fratura, entorse com incapacidade de apoiar o pé, ou dor com febre, não devem esperar por consulta eletiva: são casos de pronto atendimento." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Varia muito. No particular e em boa parte dos convênios, a consulta costuma sair em dias ou poucas semanas. No SUS, a fila para ortopedia eletiva é uma das mais longas e pode levar meses, com prioridade para casos avaliados como mais graves. Situações agudas, como fratura, entorse com incapacidade de apoiar o pé, ou dor com febre, não devem esperar por consulta eletiva: são casos de pronto atendimento." }
         }
       ]
     }
@@ -490,147 +692,288 @@ a.card:hover .more{gap:10px}
 }
 </script>
 </head>
-<body>
+<body data-pagina="home">
 <div class="readbar" aria-hidden="true"></div>
 <a class="skip" href="#conteudo">Ir para o conteúdo</a>
-<!--HEADER:S--><header class="site-header"><div class="bar"><a class="brand" href="index.html" aria-label="Curitiba Ortopedia, página inicial"><svg class="mark" viewBox="0 0 32 32" role="img" aria-label="Curitiba Ortopedia" xmlns="http://www.w3.org/2000/svg" focusable="false"><path d="M24.05 23.02 A10.5 10.5 0 1 1 24.05 8.98" fill="none" stroke="currentColor" stroke-width="4.2" stroke-linecap="round"/><circle cx="26.6" cy="16" r="3.3" fill="#B25E36"/></svg><span class="wordmark"><span class="wm-1">Curitiba Ortopedia</span><span class="wm-2">Guia de ortopedistas</span></span></a><nav class="mainnav" aria-label="Navegação principal"><a class="nav-link" href="index.html">Início</a><a class="nav-link" href="ortopedistas-em-curitiba.html">Ortopedistas</a><div class="nav-group" data-open="false"><button class="nav-btn" type="button" aria-expanded="false" aria-controls="menu-regioes">Por região do corpo<span class="chev" aria-hidden="true"></span></button><div class="nav-menu" id="menu-regioes"><div class="grp">Membro inferior</div><a href="ortopedista-joelho-curitiba.html">Joelho<small>Dor, menisco, ligamentos, artrose</small></a><a class="soon" aria-disabled="true">Quadril<small>Conteúdo no site irmão</small></a><a class="soon" aria-disabled="true">Pé e tornozelo</a><div class="grp">Membro superior e coluna</div><a href="ortopedista-ombro-curitiba.html">Ombro<small>Manguito rotador, tendinite, luxação</small></a><a href="ortopedista-coluna-curitiba.html">Coluna<small>Lombalgia, hérnia de disco, ciática</small></a><a class="soon" aria-disabled="true">Mão e punho</a><div class="grp">Outras áreas</div><a class="soon" aria-disabled="true">Ortopedia infantil</a><a class="soon" aria-disabled="true">Medicina esportiva</a></div></div><div class="nav-group" data-open="false"><button class="nav-btn" type="button" aria-expanded="false" aria-controls="menu-guias">Guias<span class="chev" aria-hidden="true"></span></button><div class="nav-menu" id="menu-guias"><a href="qual-medico-procurar-para-cada-dor.html">Qual médico procurar para cada dor<small>Tabela de sintoma por especialidade</small></a><a href="crm-rqe-como-verificar-ortopedista.html">CRM, RQE e como verificar<small>Confira o registro antes da consulta</small></a><a href="sobre.html">Sobre o projeto</a></div></div><a class="nav-link cta" href="cadastre-se.html">Cadastre-se</a></nav><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-mobile"><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>Menu</button></div><div class="mobile-panel" id="menu-mobile"><div class="inner"><a href="index.html">Início</a><a href="ortopedistas-em-curitiba.html">Ortopedistas</a><div class="grp">Por região do corpo</div><a href="ortopedista-joelho-curitiba.html">Joelho</a><a class="soon" aria-disabled="true">Quadril</a><a class="soon" aria-disabled="true">Pé e tornozelo</a><a href="ortopedista-ombro-curitiba.html">Ombro</a><a href="ortopedista-coluna-curitiba.html">Coluna</a><a class="soon" aria-disabled="true">Mão e punho</a><a class="soon" aria-disabled="true">Ortopedia infantil</a><a class="soon" aria-disabled="true">Medicina esportiva</a><div class="grp">Guias</div><a href="qual-medico-procurar-para-cada-dor.html">Qual médico procurar para cada dor</a><a href="crm-rqe-como-verificar-ortopedista.html">CRM, RQE e como verificar</a><a href="sobre.html">Sobre o projeto</a><a class="cta" href="cadastre-se.html">Cadastre-se</a></div></div></header><!--HEADER:E-->
+<!--HEADER:S--><header class="site-header"><div class="bar"><a class="brand" href="index.html" aria-label="Curitiba Ortopedia, página inicial"><svg class="mark" viewBox="0 0 32 32" role="img" aria-label="Curitiba Ortopedia" xmlns="http://www.w3.org/2000/svg" focusable="false"><path d="M24.05 23.02 A10.5 10.5 0 1 1 24.05 8.98" fill="none" stroke="currentColor" stroke-width="4.2" stroke-linecap="round"/><circle cx="26.6" cy="16" r="3.3" fill="#B25E36"/></svg><span class="wordmark"><span class="wm-1">Curitiba Ortopedia</span><span class="wm-2">Guia de ortopedistas</span></span></a><nav class="mainnav" aria-label="Navegação principal"><a class="nav-link" href="index.html">Início</a><div class="nav-group" data-open="false"><button class="nav-btn" type="button" aria-expanded="false" aria-controls="menu-regioes">Por região do corpo<span class="chev" aria-hidden="true"></span></button><div class="nav-menu" id="menu-regioes"><a href="ortopedia-geral-curitiba.html">Ortopedia geral<small>Cuida de tudo, comece por aqui</small></a><a href="ortopedistas-em-curitiba.html">Ver todas as áreas<small>A lista completa de ortopedistas</small></a><div class="grp">Membro inferior</div><a href="ortopedista-joelho-curitiba.html">Joelho<small>Dor, menisco, ligamentos, artrose</small></a><a href="ortopedista-quadril-curitiba.html">Quadril<small>Virilha, artrose, bursite, prótese</small></a><a href="ortopedista-pe-tornozelo-curitiba.html">Pé e tornozelo<small>Calcanhar, entorse, joanete, Aquiles</small></a><div class="grp">Membro superior e coluna</div><a href="ortopedista-ombro-curitiba.html">Ombro<small>Manguito rotador, tendinite, luxação</small></a><a href="ortopedista-coluna-curitiba.html">Coluna<small>Lombalgia, hérnia de disco, ciática</small></a><a href="ortopedista-mao-curitiba.html">Mão e punho<small>Túnel do carpo, dedo em gatilho</small></a><div class="grp">Outras áreas</div><a href="ortopedista-infantil-curitiba.html">Ortopedia infantil<small>Crianças e adolescentes</small></a><a href="medicina-esportiva-curitiba.html">Medicina esportiva<small>Lesões de treino e retorno ao esporte</small></a></div></div><div class="nav-group" data-open="false"><button class="nav-btn" type="button" aria-expanded="false" aria-controls="menu-guias">Guias<span class="chev" aria-hidden="true"></span></button><div class="nav-menu" id="menu-guias"><div class="grp">Antes de marcar</div><a href="qual-medico-procurar-para-cada-dor.html">Qual médico procurar para cada dor<small>Tabela de sintoma por especialidade</small></a><a href="melhor-ortopedista-curitiba.html">Como escolher um bom ortopedista<small>Critérios objetivos, sem ranking</small></a><a href="crm-rqe-como-verificar-ortopedista.html">CRM, RQE e como verificar<small>Confira o registro em um minuto</small></a><div class="grp">Acesso e custos</div><a href="ortopedista-sus-curitiba.html">Ortopedista pelo SUS em Curitiba<small>O caminho, passo a passo</small></a><a href="quanto-custa-consulta-ortopedista-curitiba.html">Quanto custa a consulta<small>SUS, convênio e particular</small></a><a href="primeira-consulta-ortopedista.html">Primeira consulta: o que levar<small>Documentos, exames e perguntas</small></a><a href="ortopedista-reumatologista-fisiatra.html">Ortopedista, reumatologista ou fisiatra<small>Quem cuida do quê</small></a><div class="grp">O projeto</div><a href="sobre.html">Sobre o Curitiba Ortopedia</a></div></div><a class="nav-link" href="cadastre-se.html">Para médicos</a><a class="nav-link cta-accent" href="encontre-um-ortopedista.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/></svg>Buscar ortopedista</a></nav><div class="a11y" role="group" aria-label="Tamanho da letra"><span class="rotulo">Letra</span><button type="button" class="menos" aria-label="Diminuir o tamanho da letra">A</button><button type="button" class="mais" aria-label="Aumentar o tamanho da letra">A</button></div><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-mobile"><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>Menu</button></div><div class="mobile-panel" id="menu-mobile"><div class="inner"><a class="destaque" href="encontre-um-ortopedista.html">Buscar ortopedista</a><a href="index.html">Início</a><div class="grp">Por região do corpo</div><a href="ortopedia-geral-curitiba.html">Ortopedia geral</a><a href="ortopedistas-em-curitiba.html">Ver todas as áreas</a><a href="ortopedista-joelho-curitiba.html">Joelho</a><a href="ortopedista-quadril-curitiba.html">Quadril</a><a href="ortopedista-pe-tornozelo-curitiba.html">Pé e tornozelo</a><a href="ortopedista-ombro-curitiba.html">Ombro</a><a href="ortopedista-coluna-curitiba.html">Coluna</a><a href="ortopedista-mao-curitiba.html">Mão e punho</a><a href="ortopedista-infantil-curitiba.html">Ortopedia infantil</a><a href="medicina-esportiva-curitiba.html">Medicina esportiva</a><div class="grp">Guias</div><a href="qual-medico-procurar-para-cada-dor.html">Qual médico procurar para cada dor</a><a href="melhor-ortopedista-curitiba.html">Como escolher um bom ortopedista</a><a href="crm-rqe-como-verificar-ortopedista.html">CRM, RQE e como verificar</a><a href="ortopedista-sus-curitiba.html">Ortopedista pelo SUS em Curitiba</a><a href="quanto-custa-consulta-ortopedista-curitiba.html">Quanto custa a consulta</a><a href="primeira-consulta-ortopedista.html">Primeira consulta: o que levar</a><a href="ortopedista-reumatologista-fisiatra.html">Ortopedista, reumatologista ou fisiatra</a><a href="sobre.html">Sobre o Curitiba Ortopedia</a><a href="cadastre-se.html">Para médicos</a><div class="grp">Tamanho da letra</div><div class="a11y" role="group" aria-label="Tamanho da letra"><span class="rotulo">Letra</span><button type="button" class="menos" aria-label="Diminuir o tamanho da letra">A</button><button type="button" class="mais" aria-label="Aumentar o tamanho da letra">A</button></div></div></div></header><a class="fab" href="encontre-um-ortopedista.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/></svg>Buscar ortopedista</a><!--HEADER:E-->
 <main id="conteudo">
 
 <section class="hero hero-home">
   <div class="wrap">
-    <p class="pill">Projeto informativo independente · Curitiba e região</p>
-    <h1>Ortopedista em Curitiba: o guia para achar o especialista certo para a sua dor</h1>
-    <p class="lead">Quem sente dor no joelho não procura por cirurgia do joelho. Procura por dor no joelho. Este guia existe para fazer a ponte entre o que você sente e o profissional que realmente cuida daquilo, com explicação em linguagem de paciente e sem propaganda de clínica.</p>
-    <div class="btn-row">
-      <a class="btn" href="ortopedistas-em-curitiba.html">Ver a lista de ortopedistas</a>
-      <a class="btn ghost" href="qual-medico-procurar-para-cada-dor.html">Descobrir qual médico procurar</a>
+    <p class="pill">Projeto informativo gratuito · Curitiba e região</p>
+    <h1>Ortopedista em Curitiba: comece pela parte do corpo que dói</h1>
+    <p class="lead">Você não precisa saber o nome da doença nem qual é a especialidade. Diga onde dói e este guia mostra qual ortopedista cuida disso, o que esperar da consulta e como conferir, de graça, se o médico é mesmo especialista.</p>
+
+    <div class="hero-finder">
+      <form class="finder" role="search" aria-labelledby="busca-titulo">
+        <h2 id="busca-titulo">Onde está doendo?</h2>
+        <p class="hint">Escreva com as suas palavras. Por exemplo: joelho, dor nas costas, ombro, formigamento na mão, calcanhar.</p>
+        <div class="finder-field">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/></svg>
+          <label class="sr-only" for="busca-area">Digite a parte do corpo que dói ou o sintoma</label>
+          <input type="search" id="busca-area" name="busca-area" autocomplete="off" placeholder="Ex.: joelho, coluna, ombro, mão, pé">
+          <button type="button" class="finder-clear" hidden aria-label="Limpar a busca">×</button>
+          <button class="btn accent" type="submit">Buscar</button>
+        </div>
+        <ul class="chips" aria-label="Filtrar por região do corpo">
+          <li><button type="button" class="chip" data-grupo="inferior" aria-pressed="false">Perna e pé</button></li>
+          <li><button type="button" class="chip" data-grupo="superior" aria-pressed="false">Braço, ombro e coluna</button></li>
+          <li><button type="button" class="chip" data-grupo="geral" aria-pressed="false">Outras áreas</button></li>
+        </ul>
+        <p class="finder-status" id="busca-status" role="status" aria-live="polite">Mostrando todas as áreas da ortopedia.</p>
+      </form>
     </div>
+
+    <h2 id="areas" class="sr-only">Escolha a área pela parte do corpo</h2>
+    <ul class="tile-grid">
+      <li><a class="tile" href="ortopedia-geral-curitiba.html" data-grupo="geral" data-chaves="geral ortopedia geral traumatologia fratura osso quebrado trauma queda torcao consulta primeira vez nao sei tendinite dor generica cuida de tudo">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="9"/></svg></span>
+        <span><b>Ortopedia geral</b><span>Cuida de tudo, comece aqui</span></span></a></li>
+
+      <li><a class="tile" href="ortopedista-joelho-curitiba.html" data-grupo="inferior" data-chaves="joelho menisco ligamento cruzado artrose rotula patela femoropatelar condropatia protese perna dor ao descer escada travando falseia inchaco estalo tendinite patelar">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M8 3v6l-3 4 3 8"/><path d="M16 3v5l3 5-3 8"/></svg></span>
+        <span><b>Joelho</b><span>Menisco, ligamento, artrose</span></span></a></li>
+
+      <li><a class="tile" href="ortopedista-coluna-curitiba.html" data-grupo="superior" data-chaves="coluna lombar lombalgia dor nas costas hernia de disco ciatica nervo ciatico estenose escoliose cervical pescoco dor na perna espondilolistese bico de papagaio">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v18"/><path d="M8 6h8M8 11h8M8 16h8"/></svg></span>
+        <span><b>Coluna</b><span>Lombar, hérnia de disco, ciática</span></span></a></li>
+
+      <li><a class="tile" href="ortopedista-ombro-curitiba.html" data-grupo="superior" data-chaves="ombro manguito rotador tendinite bursite subacromial ombro congelado capsulite adesiva luxacao deslocou braco cotovelo epicondilite dor ao levantar o braco dor para dormir">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="8" cy="8" r="4"/><path d="M12 11l5 3v7"/></svg></span>
+        <span><b>Ombro e cotovelo</b><span>Manguito, tendinite, luxação</span></span></a></li>
+
+      <li><a class="tile" href="ortopedista-quadril-curitiba.html" data-grupo="inferior" data-chaves="quadril virilha coxartrose artrose de quadril protese bursite trocanterica impacto femoroacetabular dor na virilha mancando dor lateral">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="14" cy="9" r="4"/><path d="M11 12l-4 9M17 12l1 9"/></svg></span>
+        <span><b>Quadril</b><span>Virilha, artrose, bursite</span></span></a></li>
+
+      <li><a class="tile" href="ortopedista-mao-curitiba.html" data-grupo="superior" data-chaves="mao punho dedo tunel do carpo formigamento dedo em gatilho cisto sinovial de quervain polegar rizartrose dormencia na mao a noite escafoide">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 12V6M11 12V4M15 12V6M19 13v-3"/><path d="M7 12v5a5 5 0 0 0 5 5h2a5 5 0 0 0 5-5v-4"/></svg></span>
+        <span><b>Mão e punho</b><span>Túnel do carpo, dedo em gatilho</span></span></a></li>
+
+      <li><a class="tile" href="ortopedista-pe-tornozelo-curitiba.html" data-grupo="inferior" data-chaves="pe tornozelo calcanhar fascite plantar esporao joanete tendao de aquiles entorse dor ao pisar dor no primeiro passo neuroma">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 3v9"/><path d="M9 12c-3 1-5 3-5 6h14a3 3 0 0 0 0-6z"/></svg></span>
+        <span><b>Pé e tornozelo</b><span>Calcanhar, entorse, joanete</span></span></a></li>
+
+      <li><a class="tile" href="ortopedista-infantil-curitiba.html" data-grupo="geral" data-chaves="crianca infantil pediatrica adolescente bebe pe torto displasia do quadril escoliose dor de crescimento crianca mancando perna torta">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="6" r="3"/><path d="M12 9v7M8 21l4-5 4 5M7 13h10"/></svg></span>
+        <span><b>Ortopedia infantil</b><span>Crianças e adolescentes</span></span></a></li>
+
+      <li><a class="tile" href="medicina-esportiva-curitiba.html" data-grupo="geral" data-chaves="esporte medicina esportiva atleta corrida futebol academia lesao muscular treino retorno ao esporte sobrecarga">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18M3.5 9h17M3.5 15h17"/></svg></span>
+        <span><b>Medicina esportiva</b><span>Lesões de treino e corrida</span></span></a></li>
+
+      <li><a class="tile" href="qual-medico-procurar-para-cada-dor.html" data-grupo="geral" data-chaves="nao sei duvida qual medico procurar sintoma dor geral ortopedia geral traumatologia fratura osso quebrado queda torcao primeira vez">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.2a2.6 2.6 0 0 1 5 .9c0 1.8-2.5 2.2-2.5 3.9"/><path d="M12 17.2v.1"/></svg></span>
+        <span><b>Não sei qual é</b><span>Descubra a partir do sintoma</span></span></a></li>
+    </ul>
+
+    <p class="busca-vazia">Não encontramos nenhuma área com essa palavra. Tente algo mais simples, como joelho, coluna, ombro, mão, pé ou quadril. Se preferir, veja o guia <a href="qual-medico-procurar-para-cada-dor.html">qual médico procurar para cada dor</a>, que parte do sintoma.</p>
+
     <p class="revdate">Última revisão: 17 de agosto de 2026</p>
   </div>
 </section>
 
-<div class="wrap">
-  <h2 id="onde-doi" style="margin-top:2.2em">Comece por onde dói</h2>
-  <p class="muted" style="max-width:64ch">Cada atalho leva para a página da subespecialidade que cuida daquela região, com o que ela trata, o que esperar da consulta e a lista de profissionais.</p>
-  <ul class="paths reveal">
-    <li><a class="path" href="ortopedista-joelho-curitiba.html"><span class="dot" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M8 3v6l-3 4 3 8"/><path d="M16 3v5l3 5-3 8"/></svg></span>Joelho</a></li>
-    <li><a class="path" href="ortopedista-coluna-curitiba.html"><span class="dot" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v18"/><path d="M8 6h8M8 11h8M8 16h8"/></svg></span>Coluna</a></li>
-    <li><a class="path" href="ortopedista-ombro-curitiba.html"><span class="dot" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="8" cy="8" r="4"/><path d="M12 11l5 3v7"/></svg></span>Ombro</a></li>
-    <li><a class="path" href="qual-medico-procurar-para-cada-dor.html#quadril"><span class="dot" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="14" cy="9" r="4"/><path d="M11 12l-4 9M17 12l1 9"/></svg></span>Quadril</a></li>
-    <li><a class="path" href="qual-medico-procurar-para-cada-dor.html#mao"><span class="dot" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 12V6M11 12V4M15 12V6M19 13v-3"/><path d="M7 12v5a5 5 0 0 0 5 5h2a5 5 0 0 0 5-5v-4"/></svg></span>Mão e punho</a></li>
-    <li><a class="path" href="qual-medico-procurar-para-cada-dor.html#pe"><span class="dot" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 3v9"/><path d="M9 12c-3 1-5 3-5 6h14a3 3 0 0 0 0-6z"/></svg></span>Pé e tornozelo</a></li>
+
+<section class="wrap vitrine-bloco" id="ortopedistas" aria-labelledby="ortopedistas-titulo">
+  <div class="vitrine-topo">
+    <h2 id="ortopedistas-titulo">Ortopedistas em Curitiba</h2>
+    <span class="selo-gratis"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5.5 5.5L20 6.5"/></svg>Cadastro 100% gratuito</span>
+  </div>
+  <p class="vitrine-intro">Esta é a vitrine do guia: cada ficha abaixo será preenchida com um ortopedista que atende em Curitiba e autorizou a publicação dos seus dados. Para o médico, aparecer aqui é <strong>totalmente gratuito</strong>. A ordem é alfabética, não existe nota, estrela nem posição paga. Use os botões de área acima para ver as fichas de cada especialidade.</p>
+  <ul class="vitrine">
+      <li class="vcard">
+        <div class="vtopo">
+          <span class="vfoto" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 20.5c1.6-3.6 4.3-5.4 7.5-5.4s5.9 1.8 7.5 5.4"/></svg></span>
+          <div>
+            <h3 class="vnome">Ficha disponível</h3>
+            <p class="vesp">Ortopedia geral e traumatologia</p>
+            <span class="vtag">Aguardando cadastro</span>
+          </div>
+        </div>
+        <div class="vdados">
+        <div class="vlinha"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.4 2.4 4.6-5"/></svg><div><span class="vrotulo">Nome, CRM e RQE</span><span class="vbarra media"></span></div></div>
+        <div class="vlinha"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg><div><span class="vrotulo">Endereço de atendimento</span><span class="vbarra "></span></div></div>
+        <div class="vlinha"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16v11H4z"/><path d="M4 11h16"/><path d="M8 15h4"/></svg><div><span class="vrotulo">Convênios aceitos</span><span class="vbarra curta"></span></div></div>
+        <div class="vlinha"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 4.5h3l1.5 4-2 1.4a12 12 0 0 0 5.1 5.1l1.4-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 6.7 2 2 0 0 1 6.5 4.5z"/></svg><div><span class="vrotulo">Telefone ou site do consultório</span><span class="vbarra media"></span></div></div>
+        </div>
+        <div class="vfoot">
+          <a class="btn accent" href="cadastre-se.html">É ortopedista? Apareça aqui</a>
+          <p class="vnota"><strong>100% gratuito</strong>, sem ranking e sem cobrança</p>
+        </div>
+      </li>
+      <li class="vcard">
+        <div class="vtopo">
+          <span class="vfoto" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 20.5c1.6-3.6 4.3-5.4 7.5-5.4s5.9 1.8 7.5 5.4"/></svg></span>
+          <div>
+            <h3 class="vnome">Ficha disponível</h3>
+            <p class="vesp">Ortopedia geral e traumatologia</p>
+            <span class="vtag">Aguardando cadastro</span>
+          </div>
+        </div>
+        <div class="vdados">
+        <div class="vlinha"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.4 2.4 4.6-5"/></svg><div><span class="vrotulo">Nome, CRM e RQE</span><span class="vbarra media"></span></div></div>
+        <div class="vlinha"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg><div><span class="vrotulo">Endereço de atendimento</span><span class="vbarra "></span></div></div>
+        <div class="vlinha"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16v11H4z"/><path d="M4 11h16"/><path d="M8 15h4"/></svg><div><span class="vrotulo">Convênios aceitos</span><span class="vbarra curta"></span></div></div>
+        <div class="vlinha"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 4.5h3l1.5 4-2 1.4a12 12 0 0 0 5.1 5.1l1.4-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 6.7 2 2 0 0 1 6.5 4.5z"/></svg><div><span class="vrotulo">Telefone ou site do consultório</span><span class="vbarra media"></span></div></div>
+        </div>
+        <div class="vfoot">
+          <a class="btn accent" href="cadastre-se.html">É ortopedista? Apareça aqui</a>
+          <p class="vnota"><strong>100% gratuito</strong>, sem ranking e sem cobrança</p>
+        </div>
+      </li>
+      <li class="vcard">
+        <div class="vtopo">
+          <span class="vfoto" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 20.5c1.6-3.6 4.3-5.4 7.5-5.4s5.9 1.8 7.5 5.4"/></svg></span>
+          <div>
+            <h3 class="vnome">Ficha disponível</h3>
+            <p class="vesp">Ortopedia geral e traumatologia</p>
+            <span class="vtag">Aguardando cadastro</span>
+          </div>
+        </div>
+        <div class="vdados">
+        <div class="vlinha"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.4 2.4 4.6-5"/></svg><div><span class="vrotulo">Nome, CRM e RQE</span><span class="vbarra media"></span></div></div>
+        <div class="vlinha"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg><div><span class="vrotulo">Endereço de atendimento</span><span class="vbarra "></span></div></div>
+        <div class="vlinha"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16v11H4z"/><path d="M4 11h16"/><path d="M8 15h4"/></svg><div><span class="vrotulo">Convênios aceitos</span><span class="vbarra curta"></span></div></div>
+        <div class="vlinha"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 4.5h3l1.5 4-2 1.4a12 12 0 0 0 5.1 5.1l1.4-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 6.7 2 2 0 0 1 6.5 4.5z"/></svg><div><span class="vrotulo">Telefone ou site do consultório</span><span class="vbarra media"></span></div></div>
+        </div>
+        <div class="vfoot">
+          <a class="btn accent" href="cadastre-se.html">É ortopedista? Apareça aqui</a>
+          <p class="vnota"><strong>100% gratuito</strong>, sem ranking e sem cobrança</p>
+        </div>
+      </li>
+      <li class="vcard">
+        <div class="vtopo">
+          <span class="vfoto" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 20.5c1.6-3.6 4.3-5.4 7.5-5.4s5.9 1.8 7.5 5.4"/></svg></span>
+          <div>
+            <h3 class="vnome">Ficha disponível</h3>
+            <p class="vesp">Ortopedia geral e traumatologia</p>
+            <span class="vtag">Aguardando cadastro</span>
+          </div>
+        </div>
+        <div class="vdados">
+        <div class="vlinha"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.4 2.4 4.6-5"/></svg><div><span class="vrotulo">Nome, CRM e RQE</span><span class="vbarra media"></span></div></div>
+        <div class="vlinha"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg><div><span class="vrotulo">Endereço de atendimento</span><span class="vbarra "></span></div></div>
+        <div class="vlinha"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16v11H4z"/><path d="M4 11h16"/><path d="M8 15h4"/></svg><div><span class="vrotulo">Convênios aceitos</span><span class="vbarra curta"></span></div></div>
+        <div class="vlinha"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 4.5h3l1.5 4-2 1.4a12 12 0 0 0 5.1 5.1l1.4-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 6.7 2 2 0 0 1 6.5 4.5z"/></svg><div><span class="vrotulo">Telefone ou site do consultório</span><span class="vbarra media"></span></div></div>
+        </div>
+        <div class="vfoot">
+          <a class="btn accent" href="cadastre-se.html">É ortopedista? Apareça aqui</a>
+          <p class="vnota"><strong>100% gratuito</strong>, sem ranking e sem cobrança</p>
+        </div>
+      </li>
+      <li class="vcard">
+        <div class="vtopo">
+          <span class="vfoto" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 20.5c1.6-3.6 4.3-5.4 7.5-5.4s5.9 1.8 7.5 5.4"/></svg></span>
+          <div>
+            <h3 class="vnome">Ficha disponível</h3>
+            <p class="vesp">Ortopedia geral e traumatologia</p>
+            <span class="vtag">Aguardando cadastro</span>
+          </div>
+        </div>
+        <div class="vdados">
+        <div class="vlinha"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.4 2.4 4.6-5"/></svg><div><span class="vrotulo">Nome, CRM e RQE</span><span class="vbarra media"></span></div></div>
+        <div class="vlinha"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg><div><span class="vrotulo">Endereço de atendimento</span><span class="vbarra "></span></div></div>
+        <div class="vlinha"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16v11H4z"/><path d="M4 11h16"/><path d="M8 15h4"/></svg><div><span class="vrotulo">Convênios aceitos</span><span class="vbarra curta"></span></div></div>
+        <div class="vlinha"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 4.5h3l1.5 4-2 1.4a12 12 0 0 0 5.1 5.1l1.4-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 6.7 2 2 0 0 1 6.5 4.5z"/></svg><div><span class="vrotulo">Telefone ou site do consultório</span><span class="vbarra media"></span></div></div>
+        </div>
+        <div class="vfoot">
+          <a class="btn accent" href="cadastre-se.html">É ortopedista? Apareça aqui</a>
+          <p class="vnota"><strong>100% gratuito</strong>, sem ranking e sem cobrança</p>
+        </div>
+      </li>
+      <li class="vcard">
+        <div class="vtopo">
+          <span class="vfoto" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 20.5c1.6-3.6 4.3-5.4 7.5-5.4s5.9 1.8 7.5 5.4"/></svg></span>
+          <div>
+            <h3 class="vnome">Ficha disponível</h3>
+            <p class="vesp">Ortopedia geral e traumatologia</p>
+            <span class="vtag">Aguardando cadastro</span>
+          </div>
+        </div>
+        <div class="vdados">
+        <div class="vlinha"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.4 2.4 4.6-5"/></svg><div><span class="vrotulo">Nome, CRM e RQE</span><span class="vbarra media"></span></div></div>
+        <div class="vlinha"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg><div><span class="vrotulo">Endereço de atendimento</span><span class="vbarra "></span></div></div>
+        <div class="vlinha"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16v11H4z"/><path d="M4 11h16"/><path d="M8 15h4"/></svg><div><span class="vrotulo">Convênios aceitos</span><span class="vbarra curta"></span></div></div>
+        <div class="vlinha"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 4.5h3l1.5 4-2 1.4a12 12 0 0 0 5.1 5.1l1.4-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 6.7 2 2 0 0 1 6.5 4.5z"/></svg><div><span class="vrotulo">Telefone ou site do consultório</span><span class="vbarra media"></span></div></div>
+        </div>
+        <div class="vfoot">
+          <a class="btn accent" href="cadastre-se.html">É ortopedista? Apareça aqui</a>
+          <p class="vnota"><strong>100% gratuito</strong>, sem ranking e sem cobrança</p>
+        </div>
+      </li>
   </ul>
-</div>
+  <p class="vitrine-rodape">A lista está em formação e é publicada em ordem alfabética, apenas com dados fornecidos e autorizados pelo próprio médico. Não há cobrança de nenhum tipo, não há destaque comprado e não existe classificação por qualidade. Cada profissional é o único responsável pela sua publicidade médica perante o Conselho Federal de Medicina, e a presença nesta lista não constitui recomendação ou aval de qualidade por parte deste site.</p>
+  <div class="faixa-gratis">
+    <p><strong>Para o médico, aparecer aqui é totalmente gratuito, sempre.</strong> Não existe plano pago, não existe destaque comprado, não cobramos comissão por consulta e não vamos cobrar no futuro. O projeto é informativo e sem fins comerciais.</p>
+    <a class="btn accent" href="cadastre-se.html">Quero minha ficha</a>
+  </div>
+</section>
 
 <div class="wrap read">
   <div class="prose">
 
-    <h2 id="como-usar">Como usar este guia</h2>
-    <p>O site tem duas camadas. A primeira é a <a href="ortopedistas-em-curitiba.html">lista de ortopedistas de Curitiba</a>, organizada por área de atuação, com CRM, RQE, endereço de atendimento e convênios aceitos, publicada em ordem alfabética e apenas com dados autorizados pelo próprio médico. A segunda camada são os textos explicativos: o que cada subespecialidade trata, como se prepara para a consulta, o que significam os exames e onde começa e termina o que a ortopedia resolve.</p>
-    <p>Se você já sabe o que tem, vá direto para a página da área. Se não sabe, e a maior parte das pessoas não sabe, comece pelo guia <a href="qual-medico-procurar-para-cada-dor.html">qual médico procurar para cada dor</a>. Ele parte do sintoma, não do diagnóstico.</p>
+    <h2 id="como-funciona">Como este guia funciona, em três passos</h2>
+    <ol class="steps">
+      <li><b>Escolha a região que dói</b><span>Use a busca ou os botões acima. Não precisa saber o nome da doença, só onde está doendo.</span></li>
+      <li><b>Leia o que aquela área trata</b><span>Cada página explica as queixas típicas, o que esperar da consulta, quais exames fazem sentido e o que a evidência mostra sobre cada tratamento.</span></li>
+      <li><b>Confira o registro e marque</b><span>Com o nome ou o CRM dá para verificar em um minuto, de graça, se o médico tem especialidade registrada. Depois é só entrar em contato com o consultório.</span></li>
+    </ol>
+
+    <h2 id="guias">Guias que ajudam antes de marcar</h2>
+    <div class="cards">
+      <a class="card reveal" href="qual-medico-procurar-para-cada-dor.html">
+        <h3>Qual médico procurar para cada dor</h3>
+        <p>Tabela de sintoma por especialidade, inclusive quando o problema não é ortopédico.</p>
+        <span class="more">Ler o guia →</span>
+      </a>
+      <a class="card reveal" href="ortopedista-sus-curitiba.html">
+        <h3>Ortopedista pelo SUS em Curitiba</h3>
+        <p>O caminho passo a passo, o que levar na unidade de saúde e como acompanhar a fila.</p>
+        <span class="more">Ler o guia →</span>
+      </a>
+      <a class="card reveal" href="quanto-custa-consulta-ortopedista-curitiba.html">
+        <h3>Quanto custa a consulta</h3>
+        <p>SUS, convênio e particular, com as perguntas que evitam surpresa no orçamento.</p>
+        <span class="more">Ler o guia →</span>
+      </a>
+      <a class="card reveal" href="crm-rqe-como-verificar-ortopedista.html">
+        <h3>CRM, RQE e como verificar</h3>
+        <p>Como saber, de graça e em um minuto, se o médico é especialista de verdade.</p>
+        <span class="more">Ler o guia →</span>
+      </a>
+      <a class="card reveal" href="primeira-consulta-ortopedista.html">
+        <h3>Primeira consulta: o que levar</h3>
+        <p>Documentos, exames, roupa adequada e sete perguntas que valem a consulta.</p>
+        <span class="more">Ler o guia →</span>
+      </a>
+      <a class="card reveal" href="melhor-ortopedista-curitiba.html">
+        <h3>Como escolher um bom ortopedista</h3>
+        <p>Por que rankings não servem e quais critérios objetivos usar no lugar deles.</p>
+        <span class="more">Ler o guia →</span>
+      </a>
+    </div>
+
+    <h2 id="o-que-faz">O que o ortopedista faz, na prática</h2>
+    <p>A especialidade se chama ortopedia e traumatologia e cuida do aparelho locomotor inteiro: ossos, articulações, músculos, tendões, ligamentos e as raízes nervosas que passam por essas estruturas. Vai de uma fratura de punho depois de uma queda no gelo do inverno curitibano até uma artrose de joelho que levou vinte anos para se instalar.</p>
+    <p>Duas coisas costumam surpreender. A primeira é que a maior parte do que o ortopedista trata não termina em cirurgia: tendinopatias, lombalgias, entorses e boa parte das artroses iniciais são tratadas com medicação, fisioterapia, ajuste de carga e tempo. A segunda é que a consulta é sobretudo conversa e exame físico, e o exame de imagem entra depois, para confirmar ou descartar uma hipótese que já foi formulada.</p>
+    <p>Isso tem uma consequência prática: chegar com uma ressonância feita por conta própria raramente encurta o caminho. Exames de imagem mostram alterações com frequência alta em pessoas sem sintoma nenhum, e quanto maior a idade, mais achados aparecem. Um laudo com palavras assustadoras não significa que aquela seja a causa da sua dor.</p>
 
     <div class="callout info">
       <h3>O que este site é e o que ele não é</h3>
       <p>É um projeto informativo independente, gratuito e sem fins comerciais. Não vendemos consulta, não recebemos comissão por agendamento, não temos convênio com clínica nenhuma e não cobramos dos médicos para aparecer na lista.</p>
-      <p>Não é um serviço de atendimento. Nada aqui substitui uma consulta, um exame físico e uma avaliação individual. Nenhum texto deste site permite fechar um diagnóstico à distância.</p>
+      <p>Não é um serviço de atendimento. Nada aqui substitui uma consulta, um exame físico e uma avaliação individual.</p>
     </div>
 
-    <h2 id="o-que-faz">O que o ortopedista faz, na prática</h2>
-    <p>A especialidade se chama ortopedia e traumatologia. Ela cuida do aparelho locomotor inteiro: ossos, articulações, músculos, tendões, ligamentos e as raízes nervosas que passam por dentro dessas estruturas. Na prática, isso vai de uma fratura de punho depois de uma queda no gelo do inverno curitibano até uma artrose de joelho que se instalou ao longo de vinte anos.</p>
-    <p>Duas coisas surpreendem quem chega pela primeira vez. A primeira é que a maior parte do que o ortopedista trata não termina em cirurgia. Tendinopatias, lombalgias, entorses e boa parte das artroses iniciais são tratadas com medicação, fisioterapia, ajuste de carga e tempo. A segunda é que a consulta é sobretudo conversa e exame físico. O exame de imagem entra depois, para confirmar ou descartar uma hipótese que já foi formulada, e não antes, para procurar alguma coisa às cegas.</p>
-    <p>Isso tem uma consequência prática importante: chegar com uma ressonância feita por conta própria raramente encurta o caminho. Ressonâncias de pessoas sem sintoma nenhum mostram alterações com frequência alta, e quanto maior a idade, mais achados aparecem. Um laudo com palavras assustadoras não significa que aquela é a causa da sua dor. Quem conecta o laudo à sua queixa é o exame físico.</p>
-
-    <h2 id="subespecialidades">As subespecialidades da ortopedia</h2>
-    <p>Depois dos três anos de residência em ortopedia e traumatologia, muitos médicos fazem mais um ou dois anos de formação em uma área específica. Isso não torna o ortopedista geral incapaz de tratar aquela região, mas em problemas complexos ou cirúrgicos faz diferença de volume e de experiência. Abaixo, o que cada área cobre.</p>
-
-    <div class="cards">
-      <a class="card reveal" href="ortopedista-joelho-curitiba.html">
-        <h3>Joelho</h3>
-        <p>Lesão de menisco, ligamento cruzado, condropatia e dor femoropatelar, artrose e prótese de joelho.</p>
-        <span class="more">Ver a página do joelho →</span>
-      </a>
-      <a class="card reveal" href="ortopedista-coluna-curitiba.html">
-        <h3>Coluna</h3>
-        <p>Lombalgia, hérnia de disco, ciática, estenose de canal, escoliose e dor cervical.</p>
-        <span class="more">Ver a página da coluna →</span>
-      </a>
-      <a class="card reveal" href="ortopedista-ombro-curitiba.html">
-        <h3>Ombro e cotovelo</h3>
-        <p>Manguito rotador, tendinite calcária, ombro congelado, luxação recidivante e epicondilite.</p>
-        <span class="more">Ver a página do ombro →</span>
-      </a>
-      <a class="card reveal" href="https://quadrilcuritiba.com.br/" rel="noopener">
-        <h3>Quadril</h3>
-        <p>Artrose de quadril, bursite trocantérica, impacto femoroacetabular e prótese. Tratado em profundidade no nosso site irmão.</p>
-        <span class="more">Ir para quadrilcuritiba.com.br →</span>
-      </a>
-      <div class="card soon reveal">
-        <h3>Mão e punho</h3>
-        <p>Síndrome do túnel do carpo, dedo em gatilho, tendinite de De Quervain, cisto sinovial e fraturas.</p>
-        <span class="more">Página em preparo</span>
-      </div>
-      <div class="card soon reveal">
-        <h3>Pé e tornozelo</h3>
-        <p>Entorse de tornozelo, fascite plantar, joanete, esporão e tendinite do calcâneo.</p>
-        <span class="more">Página em preparo</span>
-      </div>
-      <div class="card soon reveal">
-        <h3>Ortopedia infantil</h3>
-        <p>Displasia do quadril, pé torto, dores de crescimento, escoliose do adolescente e desvios de marcha.</p>
-        <span class="more">Página em preparo</span>
-      </div>
-      <div class="card soon reveal">
-        <h3>Medicina esportiva</h3>
-        <p>Lesões de atletas e de praticantes recreativos, retorno ao esporte e prevenção de recidiva.</p>
-        <span class="more">Página em preparo</span>
-      </div>
-    </div>
-
-    <figure class="post-fig reveal">
-      <svg viewBox="0 0 620 330" role="img" aria-labelledby="fig-mapa-t fig-mapa-d" xmlns="http://www.w3.org/2000/svg">
-        <title id="fig-mapa-t">Da queixa à subespecialidade da ortopedia</title>
-        <desc id="fig-mapa-d">Diagrama em duas colunas. À esquerda, queixas comuns: dor ao descer escada com joelho que falseia, dor lombar que desce pela perna, dor ao levantar o braço, formigamento na mão à noite e dor no calcanhar ao levantar. À direita, as áreas correspondentes: cirurgia do joelho, coluna, ombro e cotovelo, mão e punho, pé e tornozelo. Setas ligam cada queixa à sua área.</desc>
-        <g font-family="Public Sans, sans-serif">
-          <text x="16" y="26" font-size="11.5" font-weight="700" fill="#5E6E7B" letter-spacing="1.6">O QUE VOCÊ SENTE</text>
-          <text x="374" y="26" font-size="11.5" font-weight="700" fill="#5E6E7B" letter-spacing="1.6">QUEM CUIDA</text>
-
-          <g fill="#FFFFFF" stroke="#E5DFD6"><rect x="14" y="44" width="290" height="42" rx="10"/><rect x="14" y="98" width="290" height="42" rx="10"/><rect x="14" y="152" width="290" height="42" rx="10"/><rect x="14" y="206" width="290" height="42" rx="10"/><rect x="14" y="260" width="290" height="42" rx="10"/></g>
-          <g font-size="13" fill="#33424F">
-            <text x="30" y="70">Dor ao descer escada, joelho falseia</text>
-            <text x="30" y="124">Dor lombar que desce pela perna</text>
-            <text x="30" y="178">Dor ao levantar o braço</text>
-            <text x="30" y="232">Formigamento na mão à noite</text>
-            <text x="30" y="286">Dor no calcanhar ao levantar</text>
-          </g>
-
-          <g stroke="#B25E36" stroke-width="1.6" fill="none" stroke-linecap="round">
-            <path d="M308 65 H352"/><path d="M308 119 H352"/><path d="M308 173 H352"/><path d="M308 227 H352"/><path d="M308 281 H352"/>
-          </g>
-          <g fill="#B25E36"><circle cx="356" cy="65" r="3"/><circle cx="356" cy="119" r="3"/><circle cx="356" cy="173" r="3"/><circle cx="356" cy="227" r="3"/><circle cx="356" cy="281" r="3"/></g>
-
-          <g fill="#EDF2F6" stroke="#7C93A9"><rect x="368" y="44" width="238" height="42" rx="10"/><rect x="368" y="98" width="238" height="42" rx="10"/><rect x="368" y="152" width="238" height="42" rx="10"/><rect x="368" y="206" width="238" height="42" rx="10"/><rect x="368" y="260" width="238" height="42" rx="10"/></g>
-          <g font-size="13" font-weight="600" fill="#1A2C3D">
-            <text x="384" y="70">Cirurgia do joelho</text>
-            <text x="384" y="124">Coluna</text>
-            <text x="384" y="178">Ombro e cotovelo</text>
-            <text x="384" y="232">Mão e punho</text>
-            <text x="384" y="286">Pé e tornozelo</text>
-          </g>
-        </g>
-      </svg>
-      <figcaption>Imagem ilustrativa. O caminho da queixa até a área de atuação é uma orientação inicial, não um diagnóstico: a mesma dor pode ter mais de uma origem, e é o exame físico que define.</figcaption>
-    </figure>
-
-    <h2 id="como-escolher">Como escolher um ortopedista sem cair em propaganda</h2>
-    <p>A internet está cheia de listas de melhores médicos. Nenhuma delas é confiável, por dois motivos. O primeiro é ético: o Código de Ética Médica proíbe publicidade comparativa e a autopromoção com sugestão de superioridade, então qualquer ranking sério de médicos é, no mínimo, um problema para quem aparece nele. O segundo é prático: notas de sites de agendamento medem simpatia, pontualidade e sala de espera, que importam, mas não medem indicação cirúrgica correta, que importa muito mais.</p>
-    <p>O que dá para verificar objetivamente, em poucos minutos e de graça:</p>
+    <h2 id="como-escolher">Como escolher sem cair em propaganda</h2>
+    <p>A internet está cheia de listas de melhores médicos, e nenhuma delas é confiável. O Código de Ética Médica proíbe publicidade comparativa, então qualquer ranking de médicos é, no mínimo, um problema para quem aparece nele. Além disso, notas de sites de agendamento medem simpatia, pontualidade e sala de espera, que importam, mas não medem indicação cirúrgica correta, que importa muito mais.</p>
+    <p>O que dá para verificar objetivamente, de graça e em poucos minutos:</p>
     <ul>
       <li><strong>O CRM está ativo</strong> e o nome bate com o do profissional que vai te atender.</li>
-      <li><strong>Existe RQE em ortopedia e traumatologia.</strong> O registro de qualificação de especialista é o que separa quem concluiu residência ou tem título de especialista de quem apenas atua na área.</li>
+      <li><strong>Existe RQE em ortopedia e traumatologia</strong>, o registro que separa quem concluiu residência ou tem título de especialista de quem apenas atua na área.</li>
       <li><strong>A área de atuação bate com o seu problema</strong>, quando o caso é cirúrgico ou já vem arrastado.</li>
-      <li><strong>O médico explica a alternativa não cirúrgica</strong> e diz o que acontece se você não operar. Quem só apresenta um caminho está te dando uma informação incompleta.</li>
+      <li><strong>O médico explica a alternativa não cirúrgica</strong> e diz o que acontece se você não operar.</li>
     </ul>
-    <p>O passo a passo para conferir tudo isso está no artigo <a href="crm-rqe-como-verificar-ortopedista.html">CRM, RQE e como verificar se o ortopedista é especialista de verdade</a>. É a checagem mais barata que existe em saúde e quase ninguém faz.</p>
+    <p>O passo a passo está em <a href="crm-rqe-como-verificar-ortopedista.html">CRM, RQE e como verificar</a>, e os critérios completos estão em <a href="melhor-ortopedista-curitiba.html">como escolher um bom ortopedista</a>.</p>
 
     <div class="callout alert">
       <h3>Sinais que exigem avaliação médica sem esperar por consulta eletiva</h3>
@@ -640,31 +983,43 @@ a.card:hover .more{gap:10px}
         <li>Perda de força progressiva, dormência em sela, ou perda do controle da urina ou das fezes associada a dor na coluna.</li>
         <li>Dor que piora à noite e não alivia com repouso, acompanhada de perda de peso sem explicação.</li>
         <li>Membro frio, pálido ou muito inchado depois de trauma ou imobilização.</li>
+        <li>Criança que se recusa a andar, principalmente com febre.</li>
       </ul>
       <p>Nessas situações, procure um pronto atendimento. Em emergência, o telefone do SAMU é 192.</p>
     </div>
 
-    <h2 id="sus-convenio-particular">SUS, convênio e particular em Curitiba</h2>
-    <p>Curitiba tem três portas de entrada para a ortopedia, e elas funcionam de forma diferente.</p>
-    <p><strong>Pelo SUS</strong>, o caminho começa na unidade básica de saúde do seu endereço. O médico da unidade avalia, trata o que é tratável ali e, quando indicado, encaminha para a ortopedia pelo sistema de regulação. A fila existe e é longa, com classificação por prioridade clínica. O que encurta o caminho é chegar com a documentação completa e não faltar à consulta marcada. Casos agudos, como fratura e trauma, não passam por fila eletiva: vão para a rede de urgência.</p>
-    <p><strong>Pelo convênio</strong>, a maioria dos planos permite marcar diretamente com o ortopedista, sem encaminhamento. Vale checar dois pontos antes: se o profissional atende o seu plano na modalidade exata que você tem, e se atende no endereço que você escolheu, porque muitos médicos atendem o convênio em um consultório e não em outro. Cobertura de material cirúrgico e prazos máximos de atendimento são regulados pela ANS.</p>
-    <p><strong>No particular</strong>, você marca direto e escolhe livremente. Vale pedir o valor da consulta e, principalmente, a política de retorno: consultas de ortopedia quase sempre precisam de uma segunda visita para ver exames, e o prazo de retorno sem custo varia bastante entre consultórios.</p>
+    <h2 id="sus-convenio-particular">SUS, convênio e particular</h2>
+    <p><strong>Pelo SUS</strong>, o caminho começa na unidade básica de saúde do seu endereço, que avalia e encaminha para a fila da especialidade pelo sistema de regulação. É gratuito em todas as etapas, e o guia <a href="ortopedista-sus-curitiba.html">ortopedista pelo SUS em Curitiba</a> mostra o passo a passo e o que ajuda a andar mais rápido.</p>
+    <p><strong>Pelo convênio</strong>, a maioria dos planos permite marcar direto com o ortopedista. Confirme com o consultório se ele atende o seu plano naquele endereço, porque o buscador da operadora costuma estar desatualizado.</p>
+    <p><strong>No particular</strong>, pergunte o valor da consulta e, principalmente, a política de retorno: em ortopedia quase sempre há uma segunda visita para ver exames, e isso muda o custo real. Os detalhes estão em <a href="quanto-custa-consulta-ortopedista-curitiba.html">quanto custa a consulta</a>.</p>
 
     <div class="stat-row reveal">
       <div class="stat"><b>3 anos</b><span>de residência médica em ortopedia e traumatologia, depois dos 6 anos de faculdade</span></div>
       <div class="stat"><b>+1 a 2</b><span>anos de formação adicional nas subespecialidades, como joelho, coluna ou mão</span></div>
-      <div class="stat"><b>RQE</b><span>é o registro que comprova a especialidade, e pode ser consultado de graça no portal do CFM</span></div>
+      <div class="stat"><b>RQE</b><span>é o registro que comprova a especialidade e pode ser consultado de graça no portal do CFM</span></div>
     </div>
 
     <h2 id="lista">A lista de ortopedistas</h2>
     <p>A lista é aberta, gratuita e feita só com dados que o próprio médico autorizou publicar: nome, CRM, RQE, área de atuação, endereço de atendimento, contato e convênios aceitos. Ela é publicada em ordem alfabética, sem notas, sem estrelas e sem qualquer ordenação por qualidade. Não existe posição paga e não existe destaque comprado.</p>
     <p>O projeto é novo e a lista está em formação. Enquanto ela cresce, cada página de área traz o conteúdo que ajuda você a decidir, mesmo antes de haver um nome ali. Se você é ortopedista e quer participar, a <a href="cadastre-se.html">página de cadastro</a> explica exatamente quais dados serão publicados e como pedir correção ou remoção a qualquer momento.</p>
 
+    <div class="cta-band reveal">
+      <div>
+        <h2>Pronto para achar o especialista certo?</h2>
+        <p>A busca por área mostra, em um clique, qual ortopedista cuida da parte do corpo que está doendo, com a explicação do problema e a lista de profissionais.</p>
+      </div>
+      <a class="btn lg" href="encontre-um-ortopedista.html">Buscar ortopedista por área</a>
+    </div>
+
     <h2 id="perguntas">Perguntas frequentes</h2>
     <div class="faq">
       <details>
+        <summary>Como encontro o ortopedista certo para o meu problema?</summary>
+        <div class="answer"><p>Comece pela parte do corpo que dói. No campo de busca no topo desta página, digite a palavra que você usaria para explicar a alguém, como joelho, coluna, ombro, mão, pé ou quadril, e o site mostra qual área da ortopedia cuida disso. Se preferir, use os botões grandes logo abaixo da busca. Se estiver em dúvida entre duas regiões, o guia qual médico procurar para cada dor parte do sintoma.</p></div>
+      </details>
+      <details>
         <summary>Preciso de encaminhamento para consultar com ortopedista?</summary>
-        <div class="answer"><p>Depende da porta de entrada. No SUS, sim: o acesso ao ortopedista passa pela unidade básica de saúde, que avalia e encaminha para a fila da especialidade. Em boa parte dos planos de saúde, não é preciso encaminhamento para marcar diretamente com o ortopedista, mas alguns produtos com médico de família exigem a autorização prévia. No atendimento particular, nunca é preciso encaminhamento.</p></div>
+        <div class="answer"><p>Depende da porta de entrada. No SUS, sim: o acesso ao ortopedista passa pela unidade básica de saúde, que avalia e encaminha para a fila da especialidade. Em boa parte dos planos de saúde, não é preciso encaminhamento para marcar diretamente com o ortopedista, mas alguns produtos com médico de família exigem autorização prévia. No atendimento particular, nunca é preciso encaminhamento.</p></div>
       </details>
       <details>
         <summary>Qual a diferença entre ortopedista e traumatologista?</summary>
@@ -680,7 +1035,7 @@ a.card:hover .more{gap:10px}
       </details>
       <details>
         <summary>Quanto tempo demora para conseguir uma consulta de ortopedia em Curitiba?</summary>
-        <div class="answer"><p>Varia muito. No particular e em boa parte dos convênios, a consulta costuma sair em dias ou poucas semanas. No SUS, a fila para ortopedia eletiva é uma das mais longas do país e pode levar meses, com prioridade para casos avaliados como mais graves. Situações agudas, como fratura, entorse com incapacidade de apoiar o pé, ou dor com febre, não devem esperar por consulta eletiva: são casos de pronto atendimento.</p></div>
+        <div class="answer"><p>Varia muito. No particular e em boa parte dos convênios, a consulta costuma sair em dias ou poucas semanas. No SUS, a fila para ortopedia eletiva é uma das mais longas e pode levar meses, com prioridade para casos avaliados como mais graves. Situações agudas, como fratura, entorse com incapacidade de apoiar o pé, ou dor com febre, não devem esperar por consulta eletiva: são casos de pronto atendimento.</p></div>
       </details>
     </div>
 
@@ -688,10 +1043,11 @@ a.card:hover .more{gap:10px}
       <h2>Para levar daqui</h2>
       <ul>
         <li>A escolha do ortopedista começa pela região do corpo, não pelo nome mais anunciado.</li>
-        <li>Verificar CRM e RQE no portal do CFM é gratuito, leva um minuto e elimina o risco mais grave.</li>
+        <li>Verificar CRM e RQE no portal do CFM é gratuito e leva um minuto.</li>
         <li>A maioria dos problemas ortopédicos não termina em cirurgia, e um bom médico apresenta a alternativa conservadora.</li>
         <li>Exame de imagem pedido antes da consulta raramente adianta o processo e frequentemente confunde.</li>
         <li>Rankings de melhores médicos não são confiáveis e são vedados pela ética médica.</li>
+        <li>Pelo SUS, o caminho começa na unidade básica de saúde do seu endereço.</li>
         <li>Sinais de alarme, como febre com articulação inchada ou perda de força progressiva, não esperam consulta eletiva.</li>
       </ul>
     </div>
@@ -699,21 +1055,21 @@ a.card:hover .more{gap:10px}
     <div class="refs">
       <h2>Referências</h2>
       <ol>
-        <li>Conselho Federal de Medicina. Consulta pública de médicos e de registro de qualificação de especialista. Disponível em portal.cfm.org.br.</li>
+        <li>Conselho Federal de Medicina. Consulta pública de médicos e de registro de qualificação de especialista. portal.cfm.org.br.</li>
         <li>Conselho Federal de Medicina. Código de Ética Médica, Resolução CFM nº 2.217/2018, capítulo de publicidade médica.</li>
         <li>Conselho Federal de Medicina. Resolução CFM nº 2.336/2023, sobre publicidade e propaganda médicas.</li>
-        <li>Sociedade Brasileira de Ortopedia e Traumatologia. Informações sobre residência, título de especialista e áreas de atuação. Disponível em sbot.org.br.</li>
-        <li>Agência Nacional de Saúde Suplementar. Prazos máximos de atendimento e cobertura obrigatória. Disponível em gov.br/ans.</li>
-        <li>Ministério da Saúde. Política Nacional de Atenção Básica e fluxo de referência para a atenção especializada.</li>
+        <li>Sociedade Brasileira de Ortopedia e Traumatologia. Informações sobre residência, título de especialista e áreas de atuação. sbot.org.br.</li>
+        <li>Agência Nacional de Saúde Suplementar. Prazos máximos de atendimento e cobertura obrigatória. gov.br/ans.</li>
+        <li>Prefeitura Municipal de Curitiba, Secretaria Municipal da Saúde. Rede de serviços do SUS. saude.curitiba.pr.gov.br.</li>
       </ol>
     </div>
 
-    <!--CONTACT:S--><section class="contact-block reveal" aria-labelledby="contato-titulo"><h2 id="contato-titulo">Fale com o projeto</h2><p>O Curitiba Ortopedia é um projeto informativo independente e gratuito, sem vínculo com clínicas, hospitais, planos de saúde ou fabricantes. Não realizamos atendimento, não marcamos consultas e não damos orientação clínica individual por mensagem.</p><p>Se você é ortopedista e quer aparecer na lista, se encontrou um erro em alguma página, se quer sugerir um tema ou se precisa corrigir ou remover os seus dados, escreva para o e-mail abaixo. Pedidos de correção e de remoção são atendidos sem custo.</p><p class="mailrow"><a class="btn" href="mailto:contato@curitibaortopedia.com.br">contato@curitibaortopedia.com.br</a><a class="btn ghost" href="cadastre-se.html">Entrar para a lista</a></p></section><!--CONTACT:E-->
+    <!--CONTACT:S--><section class="contact-block reveal" aria-labelledby="contato-titulo"><h2 id="contato-titulo">Fale com o projeto</h2><p>O Curitiba Ortopedia é um projeto informativo independente e gratuito, sem vínculo com clínicas, hospitais, planos de saúde ou fabricantes. Não realizamos atendimento, não marcamos consultas e não damos orientação clínica individual por mensagem.</p><p>Se você é ortopedista e quer aparecer na lista, se encontrou um erro em alguma página, se quer sugerir um tema ou se precisa corrigir ou remover os seus dados, escreva para o e-mail abaixo. Pedidos de correção e de remoção são atendidos sem custo.</p><p class="mailrow"><a class="btn" href="mailto:curitibaquadril@gmail.com">curitibaquadril@gmail.com</a><a class="btn ghost" href="cadastre-se.html">Entrar para a lista</a></p></section><!--CONTACT:E-->
   </div>
 </div>
 
 </main>
-<!--FOOTER:S--><footer class="site-footer"><div class="wrap"><div class="cols"><div><div class="fbrand"><svg class="mark" viewBox="0 0 32 32" role="img" aria-label="Curitiba Ortopedia" xmlns="http://www.w3.org/2000/svg" focusable="false"><path d="M24.05 23.02 A10.5 10.5 0 1 1 24.05 8.98" fill="none" stroke="currentColor" stroke-width="4.2" stroke-linecap="round"/><circle cx="26.6" cy="16" r="3.3" fill="#B25E36"/></svg><span>Curitiba Ortopedia</span></div><p>Guia informativo e gratuito sobre ortopedia para pacientes de Curitiba e região metropolitana, com uma lista de ortopedistas organizada por área de atuação.</p><p>Conteúdo educativo, escrito em linguagem de paciente e revisado periodicamente. Nada aqui substitui a consulta com um médico.</p></div><div><h3>Temas</h3><ul><li><a href="ortopedistas-em-curitiba.html">Ortopedista em Curitiba</a></li><li><a href="ortopedista-joelho-curitiba.html">Ortopedista de joelho</a></li><li><a href="ortopedista-coluna-curitiba.html">Ortopedista de coluna</a></li><li><a href="ortopedista-ombro-curitiba.html">Ortopedista de ombro</a></li><li><a href="qual-medico-procurar-para-cada-dor.html">Qual médico procurar</a></li><li><a href="crm-rqe-como-verificar-ortopedista.html">CRM, RQE e verificação</a></li></ul></div><div><h3>O projeto</h3><ul><li><a href="sobre.html">Sobre o projeto</a></li><li><a href="cadastre-se.html">Cadastre-se na lista</a></li><li><a href="privacidade.html">Privacidade e LGPD</a></li></ul></div></div><div class="legal"><p>Este site não indica, não classifica e não recomenda um profissional em detrimento de outro. A lista é publicada em ordem alfabética, apenas com dados fornecidos e autorizados pelo próprio médico. Cada profissional é o único responsável pela sua publicidade médica perante o Conselho Federal de Medicina.</p><p>© 2026 Curitiba Ortopedia · curitibaortopedia.com.br · Curitiba, Paraná · <a href="privacidade.html">Privacidade e LGPD</a></p></div></div></footer><!--FOOTER:E-->
+<!--FOOTER:S--><footer class="site-footer"><div class="wrap"><div class="cols"><div><div class="fbrand"><svg class="mark" viewBox="0 0 32 32" role="img" aria-label="Curitiba Ortopedia" xmlns="http://www.w3.org/2000/svg" focusable="false"><path d="M24.05 23.02 A10.5 10.5 0 1 1 24.05 8.98" fill="none" stroke="currentColor" stroke-width="4.2" stroke-linecap="round"/><circle cx="26.6" cy="16" r="3.3" fill="#B25E36"/></svg><span>Curitiba Ortopedia</span></div><p>Guia informativo e gratuito sobre ortopedia para pacientes de Curitiba e região metropolitana, com uma lista de ortopedistas organizada por área de atuação.</p><p>Conteúdo educativo, escrito em linguagem de paciente e revisado periodicamente. Nada aqui substitui a consulta com um médico.</p></div><div><h3>Áreas</h3><ul><li><a href="encontre-um-ortopedista.html">Buscar ortopedista por área</a></li><li><a href="ortopedistas-em-curitiba.html">Ortopedista em Curitiba</a></li><li><a href="ortopedia-geral-curitiba.html">Ortopedia geral</a></li><li><a href="ortopedista-joelho-curitiba.html">Joelho</a></li><li><a href="ortopedista-coluna-curitiba.html">Coluna</a></li><li><a href="ortopedista-ombro-curitiba.html">Ombro</a></li><li><a href="ortopedista-quadril-curitiba.html">Quadril</a></li><li><a href="ortopedista-mao-curitiba.html">Mão e punho</a></li><li><a href="ortopedista-pe-tornozelo-curitiba.html">Pé e tornozelo</a></li><li><a href="ortopedista-infantil-curitiba.html">Ortopedia infantil</a></li><li><a href="medicina-esportiva-curitiba.html">Medicina esportiva</a></li></ul></div><div><h3>Guias</h3><ul><li><a href="qual-medico-procurar-para-cada-dor.html">Qual médico procurar para cada dor</a></li><li><a href="melhor-ortopedista-curitiba.html">Como escolher um bom ortopedista</a></li><li><a href="crm-rqe-como-verificar-ortopedista.html">CRM, RQE e como verificar</a></li><li><a href="ortopedista-sus-curitiba.html">Ortopedista pelo SUS em Curitiba</a></li><li><a href="quanto-custa-consulta-ortopedista-curitiba.html">Quanto custa a consulta</a></li><li><a href="primeira-consulta-ortopedista.html">Primeira consulta: o que levar</a></li><li><a href="ortopedista-reumatologista-fisiatra.html">Ortopedista, reumatologista ou fisiatra</a></li></ul></div><div><h3>O projeto</h3><ul><li><a href="sobre.html">Sobre o projeto</a></li><li><a href="cadastre-se.html">Cadastre-se na lista</a></li><li><a href="privacidade.html">Privacidade e LGPD</a></li><li><a href="https://quadrilcuritiba.com.br/">Saúde do quadril, site irmão</a></li></ul></div></div><div class="legal"><p>Este site não indica, não classifica e não recomenda um profissional em detrimento de outro. A lista é publicada em ordem alfabética, apenas com dados fornecidos e autorizados pelo próprio médico. Cada profissional é o único responsável pela sua publicidade médica perante o Conselho Federal de Medicina.</p><p>© 2026 Curitiba Ortopedia · curitibaortopedia.com.br · Curitiba, Paraná · <a href="privacidade.html">Privacidade e LGPD</a></p></div></div></footer><!--FOOTER:E-->
 <!--JS:S-->
 <script>
 /* Curitiba Ortopedia — JavaScript compartilhado.
@@ -785,16 +1141,23 @@ a.card:hover .more{gap:10px}
       g.setAttribute("data-hover", "false");
       open(!aberto);
     });
+    var timer = null;
     g.addEventListener("mouseenter", function () {
       if (podeHover && !document.body.classList.contains("nav-mobile")) {
+        if (timer) { clearTimeout(timer); timer = null; }
         g.setAttribute("data-hover", "true");
         open(true);
       }
     });
     g.addEventListener("mouseleave", function () {
       if (podeHover && !document.body.classList.contains("nav-mobile")) {
-        g.setAttribute("data-hover", "false");
-        open(false);
+        /* atraso generoso: dá tempo de descer o mouse até o item desejado */
+        if (timer) { clearTimeout(timer); }
+        timer = setTimeout(function () {
+          g.setAttribute("data-hover", "false");
+          open(false);
+          timer = null;
+        }, 520);
       }
     });
     g.addEventListener("focusout", function (ev) {
@@ -835,8 +1198,10 @@ a.card:hover .more{gap:10px}
     document.body.classList.remove("nav-mobile");
     var navW = nav.scrollWidth;
     var brandW = brand.offsetWidth;
+    var a11y = barEl.querySelector(".a11y");
+    var extraW = a11y ? a11y.offsetWidth + 18 : 0;
     var pad = 44 + 18; /* padding do bar + gap mínimo */
-    if (navW > 0 && brandW > 0) { breakpoint = Math.ceil(navW + brandW + pad + 24); }
+    if (navW > 0 && brandW > 0) { breakpoint = Math.ceil(navW + brandW + extraW + pad + 24); }
     if (wasMobile) { document.body.classList.add("nav-mobile"); }
   }
   function applyBreakpoint() {
@@ -857,6 +1222,121 @@ a.card:hover .more{gap:10px}
   Array.prototype.forEach.call(document.querySelectorAll('.mobile-panel a[href^="#"], .toc a[href^="#"]'), function (a) {
     a.addEventListener("click", function () { setMobileOpen(false); });
   });
+
+  /* ---- busca de áreas na página de encontrar ortopedista ---- */
+  var campo = document.getElementById("busca-area");
+  if (campo) {
+    var cartoes = Array.prototype.slice.call(document.querySelectorAll("[data-chaves]"));
+    var status = document.getElementById("busca-status");
+    var vazio = document.querySelector(".busca-vazia");
+    var limpar = document.querySelector(".finder-clear");
+    var chips = Array.prototype.slice.call(document.querySelectorAll(".chip[data-grupo]"));
+    var grupo = "todos";
+
+    var normalizar = function (t) {
+      return (t || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+    };
+
+    var filtrar = function () {
+      var termo = normalizar(campo.value).trim();
+      var visiveis = 0;
+      cartoes.forEach(function (c) {
+        var chaves = normalizar(c.getAttribute("data-chaves"));
+        var g = c.getAttribute("data-grupo") || "";
+        var casaTermo = !termo || chaves.indexOf(termo) !== -1 ||
+          termo.split(/\s+/).every(function (parte) { return chaves.indexOf(parte) !== -1; });
+        var casaGrupo = grupo === "todos" || g === grupo;
+        var mostrar = casaTermo && casaGrupo;
+        c.hidden = !mostrar;
+        if (mostrar) { visiveis++; }
+      });
+      if (limpar) { limpar.hidden = !campo.value; }
+      if (vazio) { vazio.classList.toggle("on", visiveis === 0); }
+      if (status) {
+        if (!termo && grupo === "todos") {
+          status.textContent = "Mostrando todas as " + cartoes.length + " áreas da ortopedia.";
+        } else if (visiveis === 0) {
+          status.textContent = "Nada encontrado para essa busca. Tente uma palavra mais simples, como joelho, coluna, ombro, mão ou pé.";
+        } else if (visiveis === 1) {
+          status.textContent = "1 área encontrada.";
+        } else {
+          status.textContent = visiveis + " áreas encontradas.";
+        }
+      }
+    };
+
+    campo.addEventListener("input", filtrar);
+    campo.addEventListener("search", filtrar);
+    var form = campo.closest("form");
+    if (form) {
+      form.addEventListener("submit", function (ev) {
+        ev.preventDefault();
+        filtrar();
+        var primeiro = cartoes.filter(function (c) { return !c.hidden; })[0];
+        if (primeiro) { primeiro.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "center" }); }
+      });
+    }
+    if (limpar) {
+      limpar.addEventListener("click", function () {
+        campo.value = "";
+        filtrar();
+        campo.focus();
+      });
+    }
+    chips.forEach(function (chip) {
+      chip.addEventListener("click", function () {
+        var alvo = chip.getAttribute("data-grupo");
+        grupo = (grupo === alvo) ? "todos" : alvo;
+        chips.forEach(function (c) {
+          c.setAttribute("aria-pressed", c.getAttribute("data-grupo") === grupo ? "true" : "false");
+        });
+        filtrar();
+      });
+    });
+    filtrar();
+  }
+
+  /* ---- controle de tamanho da letra ---- */
+  var CHAVE = "co-escala";
+  var escala = 1;
+  try {
+    var salvo = parseFloat(window.localStorage.getItem(CHAVE));
+    if (salvo >= 0.9 && salvo <= 1.4) { escala = salvo; }
+  } catch (e) { /* navegador sem armazenamento, segue com o padrão */ }
+
+  var aplicarEscala = function (valor) {
+    escala = Math.min(1.4, Math.max(0.9, Math.round(valor * 100) / 100));
+    document.documentElement.style.setProperty("--escala", escala);
+    try { window.localStorage.setItem(CHAVE, escala); } catch (e) { /* sem armazenamento */ }
+    Array.prototype.forEach.call(document.querySelectorAll(".a11y"), function (c) {
+      c.setAttribute("data-escala", Math.round(escala * 100) + "%");
+    });
+  };
+  aplicarEscala(escala);
+  Array.prototype.forEach.call(document.querySelectorAll(".a11y button"), function (b) {
+    b.addEventListener("click", function () {
+      aplicarEscala(escala + (b.classList.contains("mais") ? 0.1 : -0.1));
+    });
+  });
+
+  /* ---- botão flutuante de busca no celular ---- */
+  var fab = document.querySelector(".fab");
+  if (fab) {
+    var alvoFab = document.querySelector(".finder") || document.querySelector(".area-list");
+    var mostrarFab = function (estado) { fab.classList.toggle("on", !!estado); };
+    if (document.body.getAttribute("data-pagina") === "busca") {
+      mostrarFab(false);
+    } else if ("IntersectionObserver" in window && alvoFab) {
+      var ioFab = new IntersectionObserver(function (ents) {
+        mostrarFab(!ents[0].isIntersecting);
+      }, { threshold: 0 });
+      ioFab.observe(alvoFab);
+    } else {
+      var alternar = function () { mostrarFab(window.scrollY > 420); };
+      window.addEventListener("scroll", alternar, { passive: true });
+      alternar();
+    }
+  }
 
   /* ---- marca o link da página atual ---- */
   var here = location.pathname.split("/").pop() || "index.html";

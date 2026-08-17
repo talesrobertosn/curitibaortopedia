@@ -2,7 +2,7 @@
 
 Documento de continuidade. Quem abrir um chat novo deve ler este arquivo inteiro antes de produzir qualquer coisa.
 
-Última atualização: 17 de agosto de 2026 (sessão 1, entrega inicial).
+Última atualização: 17 de agosto de 2026 (sessão 1, com três rodadas: entrega inicial, revisão de navegação e busca, conclusão do site e a vitrine de ortopedistas, com 22 páginas).
 
 ---
 
@@ -14,35 +14,86 @@ Objetivo declarado: primeira posição do Google para "ortopedista em Curitiba" 
 
 Etapa 1 (atual): o nome do dono não aparece em lugar nenhum do site. O projeto se apresenta como informativo independente, com autoria institucional. A Etapa 2, com nome, RQE e schema de médico, só acontece quando houver título de especialista, e não deve ser antecipada.
 
-### Páginas publicadas (10)
+E-mail de contato do projeto, usado em todas as páginas e no schema: `curitibaquadril@gmail.com`, o mesmo do site irmão.
 
-| Arquivo | Termo-alvo | Situação |
-|---|---|---|
-| `index.html` | ortopedista em Curitiba (hub) | pronta |
-| `ortopedistas-em-curitiba.html` | ortopedista em Curitiba, pilar | pronta, diretório vazio por enquanto |
-| `ortopedista-joelho-curitiba.html` | ortopedista de joelho Curitiba | pronta |
-| `ortopedista-coluna-curitiba.html` | ortopedista de coluna Curitiba | pronta |
-| `ortopedista-ombro-curitiba.html` | ortopedista de ombro Curitiba | pronta |
-| `crm-rqe-como-verificar-ortopedista.html` | CRM, RQE, verificar ortopedista | pronta, artigo-assinatura |
-| `qual-medico-procurar-para-cada-dor.html` | qual médico procurar para cada dor | pronta, peça central de linkagem interna |
-| `cadastre-se.html` | cadastro de médicos | pronta |
-| `sobre.html` | institucional | pronta |
-| `privacidade.html` | LGPD | pronta |
+### Páginas publicadas (22)
+
+Camada 1, indicação e áreas:
+
+| Arquivo | Termo-alvo |
+|---|---|
+| `index.html` | ortopedista em Curitiba, hub com a busca no topo |
+| `encontre-um-ortopedista.html` | buscar ortopedista por área |
+| `ortopedistas-em-curitiba.html` | ortopedista em Curitiba, pilar com o diretório |
+| `ortopedia-geral-curitiba.html` | ortopedista geral Curitiba, a área que cuida de tudo |
+| `ortopedista-joelho-curitiba.html` | ortopedista de joelho Curitiba |
+| `ortopedista-coluna-curitiba.html` | ortopedista de coluna Curitiba |
+| `ortopedista-ombro-curitiba.html` | ortopedista de ombro Curitiba |
+| `ortopedista-quadril-curitiba.html` | ortopedista de quadril Curitiba, curta, aponta para o site irmão |
+| `ortopedista-mao-curitiba.html` | ortopedista de mão Curitiba |
+| `ortopedista-pe-tornozelo-curitiba.html` | ortopedista de pé e tornozelo Curitiba |
+| `ortopedista-infantil-curitiba.html` | ortopedista infantil Curitiba |
+| `medicina-esportiva-curitiba.html` | médico do esporte Curitiba |
+
+Camada 2, guias que capturam a dúvida:
+
+| Arquivo | Termo-alvo |
+|---|---|
+| `crm-rqe-como-verificar-ortopedista.html` | CRM, RQE, verificar ortopedista, artigo-assinatura |
+| `qual-medico-procurar-para-cada-dor.html` | qual médico procurar para cada dor |
+| `melhor-ortopedista-curitiba.html` | melhor ortopedista de Curitiba, atacado pela via honesta |
+| `ortopedista-sus-curitiba.html` | ortopedista pelo SUS em Curitiba |
+| `quanto-custa-consulta-ortopedista-curitiba.html` | quanto custa consulta com ortopedista |
+| `primeira-consulta-ortopedista.html` | o que levar na primeira consulta |
+| `ortopedista-reumatologista-fisiatra.html` | diferença entre ortopedista, reumatologista e fisiatra |
+
+Institucionais: `cadastre-se.html`, `sobre.html`, `privacidade.html`.
 
 ### Arquivos de infraestrutura no repositório
 
 `CNAME`, `.nojekyll`, `robots.txt`, `sitemap.xml`, `favicon.ico`, `favicon.svg`, `apple-touch-icon.png`, `og-image.png`, `styles.css`, `main.js`. Nenhum deles pode ser apagado.
 
-### O que ficou para a próxima sessão
+### Fila de conteúdo para as próximas sessões
 
-1. `ortopedista-mao-curitiba.html`
-2. `ortopedista-pe-tornozelo-curitiba.html`
-3. `ortopedista-quadril-curitiba.html` (curta, porta de entrada, aponta para quadrilcuritiba.com.br)
-4. `ortopedista-infantil-curitiba.html`
-5. `medicina-esportiva-curitiba.html`
-6. Artigos: quanto custa a consulta, ortopedista pelo SUS em Curitiba, ortopedista contra reumatologista contra fisiatra, como se preparar para a primeira consulta, pronto atendimento ortopédico, o que é RQE e título pela SBOT, e depois os artigos de sintoma por região.
+Não existe mais nenhum item marcado como "em breve": menu, busca e rodapé estão completos. A fila agora é de artigos de sintoma, que servem para pescar busca de cauda longa e empurrar o leitor para a página de área correspondente:
 
-Enquanto essas páginas não existem, elas aparecem no menu e nos cards como "em breve", sem `href`, para não quebrar o QA.
+1. Dor no joelho ao descer escada, joelho que estala, joelho inchado.
+2. Dor lombar que desce pela perna, dor lombar ao levantar da cama.
+3. Dor no ombro ao levantar o braço, dor no ombro ao dormir.
+4. Formigamento na mão à noite, dedo que trava.
+5. Dor no calcanhar ao levantar, o que fazer depois de torcer o tornozelo.
+6. Pronto atendimento ortopédico em Curitiba, quando ir ao pronto-socorro.
+7. O que é RQE, residência médica e título de especialista pela SBOT.
+
+Cada artigo novo deve ser criado pelo gerador `page_builder.py`, receber link contextual na página de área correspondente e entrar em `FOOTER_GUIAS_NEW` ou no menu Guias, dentro de `apply_polish.py`.
+
+### A vitrine de ortopedistas, que é o coração do site
+
+Esta é a parte mais importante do projeto e a que mais deve aparecer. A vitrine é uma grade de fichas de profissional, no formato de diretório, que existe mesmo antes de haver qualquer médico cadastrado. Cada ficha em branco mostra a estrutura do que será publicado, com espaço para foto, nome, CRM e RQE, endereço, convênios e contato, e traz o botão "É ortopedista? Apareça aqui".
+
+Onde a vitrine aparece hoje:
+
+- **Home**, logo abaixo dos botões de especialidade, com seis fichas de ortopedia geral. É o bloco `#ortopedistas`.
+- **Páginas de área**, imediatamente depois do hero, antes do índice e antes de qualquer texto longo. Essa ordem é deliberada: quem clica em uma especialidade quer ver os profissionais, não ler. O texto da área vem depois das fichas.
+- **Página de busca**, abaixo da lista de áreas, com seis fichas.
+- **Página pilar**, com seis fichas.
+- Cada página de área usa três fichas, já rotuladas com a especialidade daquela página, na seção `#lista`. A página de ortopedia geral e a pilar usam seis.
+
+Como o código funciona:
+
+- `vitrine(area, n, titulo, intro, rodape)` em `page_builder.py` gera a grade inteira. As páginas geradas recebem isso automaticamente pelo parâmetro `lista={"titulo":..., "area":..., "n":...}`.
+- `ficha(nome, registro, area, endereco, contato, convenios, site)` gera a ficha de um profissional real, no mesmo componente visual. Para publicar um médico, basta substituir uma das fichas em branco pela saída de `ficha(...)` e rodar o QA.
+- O CSS dos dois estados é o mesmo bloco `.vcard`, com a variante `.preenchida`.
+
+Gratuidade: ela precisa estar visível em todo lugar onde a vitrine aparece. Hoje aparece no selo verde-cobre ao lado do título, na frase de abertura, no rodapé de cada ficha e na faixa laranja com o botão. Não remova nenhum desses pontos.
+
+Regras que não mudam ao preencher:
+
+1. Só entra com autorização expressa registrada por e-mail, e apenas os campos previstos em `cadastre-se.html`.
+2. A ordem é alfabética dentro de cada área. Nenhuma ficha recebe destaque, nota, estrela ou posição paga.
+3. Antes de publicar, confira CRM e RQE na consulta pública do CFM.
+4. Só depois de existirem profissionais reais e autorizados é que se pode adicionar `ItemList` com itens `Physician` no JSON-LD daquela página. Nunca marque schema de médico com dado de exemplo.
+5. O rodapé da vitrine, com o aviso de que a lista não recomenda ninguém e de que cada profissional responde pela própria publicidade, precisa continuar visível.
 
 ---
 
@@ -60,15 +111,34 @@ repositório/                  (é o que o GitHub Pages publica)
   styles.css  main.js
   HANDOFF-curitibaortopedia.md
   build/                      (ferramentas, não fazem parte do site)
-    design.css   sistema de design, fonte única da verdade
-    newjs.txt    JavaScript compartilhado
-    inject.py    substitui os marcadores numa página nova
+    design.css       sistema de design, fonte única da verdade
+    newjs.txt        JavaScript compartilhado
+    inject.py        substitui os marcadores numa página nova
     apply_polish.py  propaga CSS, JS, marca, nav, contato e rodapé
-    qa.py        verificação obrigatória
+    page_builder.py  gera uma página inteira a partir do conteúdo
+    conteudo_areas_1.py, conteudo_areas_2.py, conteudo_areas_3.py,
+    conteudo_artigos.py
+                     o conteúdo das páginas geradas, em Python
+    qa.py            verificação obrigatória
     make_sitemap.py  gera sitemap.xml com lastmod real
     make_assets.py   gera og-image.png, favicon.ico e apple-touch-icon.png
     check_layout.py  mede a nav e tira capturas com Playwright
 ```
+
+### O gerador de páginas
+
+`page_builder.py` monta head, Open Graph, favicon, os blocos JSON-LD, o hero, o índice navegável, o corpo, a FAQ visível, os takeaways, as referências e os marcadores, tudo a partir de um dicionário de conteúdo. Ele valida o tamanho do title e da description e, o mais importante, **gera o FAQPage a partir da mesma lista que desenha a FAQ visível**, o que torna impossível a divergência que custou caro no site irmão.
+
+Para criar uma página nova, o caminho mais rápido é escrever o conteúdo em um arquivo no estilo de `conteudo_artigos.py` e rodar:
+
+```
+python3 build/conteudo_artigos.py
+python3 build/inject.py nova-pagina.html
+python3 build/apply_polish.py && python3 build/make_sitemap.py
+python3 build/qa.py && python3 build/check_layout.py
+```
+
+As páginas antigas continuam escritas à mão, e as duas formas convivem sem problema, porque o resultado final tem a mesma estrutura.
 
 Os scripts detectam sozinhos as duas disposições possíveis: `build/` ao lado de uma pasta `site/`, ou `build/` dentro do próprio repositório. Não é preciso ajustar caminho.
 
@@ -127,9 +197,29 @@ Newsreader nos títulos, Public Sans no corpo, carregadas do Google Fonts com pr
 
 Anel aberto à direita com um ponto de cobre no vão, sugerindo articulação. Definido uma única vez em `MARK_SVG`, dentro de `apply_polish.py`, e propagado para cabeçalho e rodapé. O anel usa `currentColor`, então funciona em fundo claro e escuro. O favicon é o mesmo símbolo em um quadrado arredondado azul-ardósia, legível a 16px.
 
+### Navegação e busca, revisadas na sessão 1
+
+A barra de navegação é: Início, Por região do corpo (menu suspenso), Guias (menu suspenso), Para médicos e, no fim, o botão de destaque em cobre "Buscar ortopedista", que leva para `encontre-um-ortopedista.html`. No celular, esse botão aparece como faixa laranja no topo do painel, antes de qualquer outro item.
+
+A página de busca funciona como um diretório: campo de busca grande, três filtros por região e uma lista de cartões `.area-card` de 58 pixels de ícone e botão próprio. A filtragem é feita no próprio navegador, sem servidor, comparando o texto digitado com o atributo `data-chaves` de cada cartão, já normalizado sem acento. Para acrescentar uma área nova basta criar o `<li>` com `data-chaves` (palavras que o paciente usaria, incluindo sintomas) e `data-grupo` (`inferior`, `superior` ou `geral`). O contador em `#busca-status` é atualizado sozinho e é anunciado por leitor de tela.
+
+Correção importante desta revisão: o menu suspenso fechava antes de o usuário conseguir clicar. A causa era o vão de 14 pixels entre o botão e o painel, que disparava `mouseleave` na descida do mouse. A solução tem duas partes, e as duas precisam existir: uma ponte invisível em `.nav-group::after`, que cobre o vão, e um atraso de 520 milissegundos antes de fechar, com o cronômetro cancelado se o mouse voltar. Itens do menu têm 12 pixels de altura interna e fonte de 1rem, para clique fácil.
+
+### Acessibilidade, pensada para leitor mais velho
+
+O site foi ajustado com a premissa explícita de que uma pessoa idosa precisa achar o ortopedista sem dificuldade:
+
+- **Busca no topo da home.** O campo de busca é a primeira coisa depois do título, e abaixo dele vêm nove botões grandes, um por área, com ícone e descrição curta. A pessoa pode digitar ou apenas clicar.
+- **Controle de tamanho da letra.** No canto direito do cabeçalho, e também dentro do menu no celular, há um controle com A menor e A maior. Ele altera a variável `--escala`, que multiplica a base de 16 pixels em `html`, e a preferência fica salva no navegador. A faixa vai de 90% a 140%.
+- **Botão flutuante no celular.** Depois que a busca sai da tela, aparece uma barra laranja fixa na parte de baixo com "Buscar ortopedista". Ela não aparece na própria página de busca, controlada por `data-pagina="busca"` no `body`.
+- **Alvos grandes.** Botões com no mínimo 50 pixels de altura, 60 na variante `lg`, itens de menu com fonte de 1rem, tiles com 82 pixels de altura mínima.
+- **Sempre um caminho de volta.** A faixa `.cta-band` repete o convite de busca na home, no pilar, no guia por sintoma e em todas as páginas geradas.
+
 ### Componentes disponíveis
 
-`.wrap` `.read` `.prose` `.lead` `.eyebrow` `.pill` `.crumbs` `.toc` `.cards` `.card` `.callout` (info, alert, accent) `.stat-row` `.stat` `.post-fig` `.faq` `.takeaways` `.refs` `.paths` `.path` `.btn` `.reveal` `.readbar` `.revdate` `.table-scroll` `.doc-list` `.doc-card` `.doc-empty` `.doc-note` `.section-band` `.divider`.
+`.wrap` `.read` `.prose` `.lead` `.eyebrow` `.pill` `.crumbs` `.toc` `.cards` `.card` `.callout` (info, alert, accent) `.stat-row` `.stat` `.post-fig` `.faq` `.takeaways` `.refs` `.paths` `.path` `.btn` (variantes ghost, accent e lg) `.reveal` `.readbar` `.revdate` `.table-scroll` `.doc-list` `.doc-card` `.doc-empty` `.doc-note` `.section-band` `.divider` `.finder` `.finder-field` `.chips` `.chip` `.area-list` `.area-card` `.tile-grid` `.tile` `.cta-band` `.steps` `.vitrine` `.vcard` (variante preenchida) `.vfoto` `.vtag` `.vficha` `.vitrine-rodape` `.a11y` `.fab`.
+
+Acessibilidade para leitor mais velho: corpo em 18 pixels, botões com 50 pixels de altura mínima e 60 na variante `lg`, itens de menu grandes, contraste alto e foco visível em cobre. A faixa `.cta-band` repete a chamada de busca na home, no pilar e no guia por sintoma, para que a pessoa nunca fique a mais de um clique da lista de ortopedistas.
 
 O `.doc-card` é o componente central do projeto: avatar com iniciais, nome, CRM e RQE, etiquetas de área, lista de definição com endereço, contato e convênios, e rodapé com a origem do dado. Ele já está desenhado e demonstrado com dados fictícios em `cadastre-se.html`.
 
@@ -169,7 +259,7 @@ Barra de progresso de leitura, entrada por IntersectionObserver com fallback em 
 
 ### Cross-link com o site irmão
 
-Existem exatamente dois links para `quadrilcuritiba.com.br` no site inteiro: o card de quadril na home e a seção de quadril em `qual-medico-procurar-para-cada-dor.html`. Não foi colocado link no rodapé, justamente para não criar uma rede de links entre os dois domínios. Se a página `ortopedista-quadril-curitiba.html` for criada, ela deve substituir um desses dois links, e não somar um terceiro.
+Por decisão do dono, o quadril é tratado como uma área do guia que vive no outro domínio, e não como um link escondido. Os pontos de saída para `quadrilcuritiba.com.br` são: o item Quadril no menu por região do corpo, o cartão de quadril na página de busca, o card na home, a seção de quadril no guia por sintoma e um link no rodapé. Nenhuma página do curitibaortopedia repete conteúdo profundo de quadril, para não canibalizar o site irmão. Se um dia existir `ortopedista-quadril-curitiba.html`, ela deve ser curta, funcionar como porta de entrada e continuar mandando o leitor para lá.
 
 ### Próximas alavancas de autoridade
 
@@ -215,6 +305,7 @@ Observação da sessão 1: o ambiente de desenvolvimento estava sem acesso ao Go
 - Itens ainda não escritos aparecem como "em breve" sem `href`, o que mantém o QA verde e sinaliza crescimento ao leitor.
 - O artigo de CRM e RQE ensina o leitor a verificar o registro no CFM, inclusive explicando que ausência de RQE não é irregularidade em si. É o tipo de honestidade que gera link espontâneo e que nenhum diretório comercial escreve.
 - Não citamos faixas de preço fechadas: em vez disso, ensinamos exatamente o que perguntar por telefone. Envelhece menos e ajuda mais.
+- A porta de entrada do site passou a ser a busca por área, no formato de diretório, com botão de destaque em cobre presente em todas as páginas. O caminho do paciente é: onde dói, área, página da área, lista de profissionais. Quem chega sem saber nada tem sempre três alternativas visíveis: a busca, os atalhos por região na home e o guia por sintoma.
 
 ## 8. Lições do site irmão, que continuam valendo
 
@@ -223,3 +314,9 @@ Observação da sessão 1: o ambiente de desenvolvimento estava sem acesso ao Go
 3. Imagem em `assets/` pode não chegar ao servidor. Por isso todo diagrama é SVG inline.
 4. Schema de FAQ que não espelha as perguntas visíveis. O QA verifica isso agora.
 5. Rich results de FAQ não existem mais. Não prometa esse ganho.
+6. Lição nova, desta sessão: menu suspenso com vão entre botão e painel fecha na cara do usuário. Sempre que mexer no `top` do `.nav-menu`, confira a ponte `.nav-group::after` e o atraso de fechamento, e teste no navegador movendo o mouse do botão até o último item da lista.
+7. Regra de especificidade que já mordeu uma vez: `nav.mainnav a.nav-link` vence `nav.mainnav .cta` no cascade. Botões de destaque na nav precisam ser escritos como `nav.mainnav a.nav-link.cta-accent`, senão o fundo simplesmente não aparece. Confira o `background` computado no navegador, não só o CSS.
+8. Componente com número de filhos variável não pode depender de `display:grid` com colunas fixas. O `.steps` quebrou exatamente assim: o contador entrava na primeira célula, o título na segunda e o texto voltava para a primeira coluna da linha seguinte. A correção é posicionar o contador em `position:absolute` e deixar o conteúdo fluir. Quando criar componente novo, teste com dois e com três filhos.
+9. Elemento com `.reveal` fica invisível até o JavaScript rodar. Existe um `<noscript>` que corrige isso, mas na hora de tirar captura de um componente é preciso rolar até ele antes, senão você fotografa um retângulo vazio e acha que o componente sumiu.
+10. Nunca use a forma curta `margin` em um bloco que também tem a classe `.wrap`. Foi assim que a vitrine da home saiu descentralizada: `margin:34px 0 10px` zerou o `margin-inline:auto` do `.wrap` e jogou a seção para a esquerda. A regra da casa é usar `margin-block` nesses casos, e conferir a centralização em 1920 pixels, que é onde o erro aparece.
+11. Nos textos de literal com `%` dentro de gerador em Python, escreva `100%%`. O `100% gratuito` do card quebrou o gerador inteiro com "not enough arguments for format string".
